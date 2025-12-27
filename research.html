@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bimsara | Research</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
+    </style>
+    <link rel="icon" type="image/png" href="images_com/icon.webp">
+</head>
+<body class="bg-[#fcfdfe] text-slate-900">
+
+    <nav class="glass border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="font-extrabold text-2xl bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent tracking-tighter">
+                B I M S A R A . o n l i n e
+            </a>
+
+            <div class="hidden md:flex space-x-10 font-semibold text-sm uppercase tracking-widest text-slate-500">
+                <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+                <a href="industry.html" class="hover:text-blue-600 transition">Industry</a>
+                <a href="research.html" class="hover:text-blue-600 transition">Research</a>
+                <a href="awards.html" class="hover:text-blue-600 transition">Awards</a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-slate-600 focus:outline-none p-2">
+                <i class="fas fa-bars text-2xl" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden glass border-t border-slate-100 animate-in slide-in-from-top duration-300">
+            <div class="px-6 py-8 flex flex-col space-y-6 font-bold text-xs uppercase tracking-[0.3em] text-slate-500">
+                <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+                <a href="industry.html" class="hover:text-blue-600 transition">Industry</a>
+                <a href="research.html" class="hover:text-blue-600 transition">Research</a>
+                <a href="awards.html" class="hover:text-blue-600 transition">Awards</a>
+            </div>
+        </div>
+    </nav>
+
+        <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            // Toggle the menu visibility
+            mobileMenu.classList.toggle('hidden');
+            
+            // Change icon from 'bars' to 'times' (X) when open
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            }
+        });
+
+        // Close menu if a link is clicked
+        const navLinks = mobileMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.replace('fa-times', 'fa-bars');
+            });
+        });
+    </script>
+
+    <main class="max-w-4xl mx-auto py-20 px-6">
+        <header class="mb-16 text-center md:text-left">
+            <h1 class="text-5xl font-extrabold tracking-tighter text-slate-900 mb-4">Academic Portfolio</h1>
+            <p class="text-lg text-slate-500 font-medium">Exploration of theoretical frameworks and empirical research.</p>
+        </header>
+
+        <section class="mb-24">
+            <h2 class="text-2xl font-extrabold mb-12 flex items-center text-blue-600 tracking-tight">
+                <span class="w-10 h-1 bg-blue-600 mr-4 rounded-full"></span>
+                Research Experience
+            </h2>
+
+            <div class="relative border-l-2 border-slate-100 ml-4 md:ml-0"> 
+                <div class="mb-16 relative pl-10">
+                    <div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-blue-600 ring-4 ring-blue-50"></div>
+                    
+                    <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500">
+                        <div class="flex flex-col md:flex-row md:items-start justify-between mb-8 gap-4">
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-extrabold text-slate-900 tracking-tight mb-4">Graduate Researcher</h3>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 border-l-2 border-blue-100 pl-4">
+                                    <div class="flex flex-col">
+                                        <span class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">Center of Excellence</span>
+                                        <p class="text-blue-600 font-bold text-xs leading-relaxed">
+                                            CIET, Sri Lanka Institute of Information Technology, Sri Lanka
+                                        </p>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">Academic Department</span>
+                                        <p class="text-blue-600 font-bold text-xs leading-relaxed">
+                                            Department of Information Technology, Faculty of Computing, Sri Lanka Institute of Information Technology, Sri Lanka
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="bg-slate-50 text-slate-500 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest border border-slate-100 whitespace-nowrap">
+                                Dec 2024 — Present
+                            </span>
+                        </div>
+
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6">
+                            Conducting advanced research at the intersection of <strong>Biomedical Engineering</strong> and <strong>Computer Vision</strong>, specifically focusing on the analysis of <strong>Optical Coherence Tomography (OCT)</strong> imaging. I architect high-performance AI models and signal processing pipelines using Python and C++ to enhance medical diagnostics and micro-structural analysis.
+                        </p>
+
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold rounded-lg uppercase tracking-tight">Biomedical Engineering</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold rounded-lg uppercase tracking-tight">Computer Vision</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold rounded-lg uppercase tracking-tight">AI/ML</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold rounded-lg uppercase tracking-tight">Technical Writing</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold rounded-lg uppercase tracking-tight">OCT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-24">
+            <h2 class="text-2xl font-extrabold mb-12 flex items-center text-blue-600 tracking-tight">
+                <span class="w-10 h-1 bg-blue-600 mr-4 rounded-full"></span>
+                Research Publications
+            </h2>
+
+            <div class="p-8 bg-white rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500">
+                <div class="flex flex-wrap justify-between items-center gap-4 mb-6">
+                    <div class="flex gap-3">
+                        <span class="bg-emerald-50 text-emerald-600 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] border border-emerald-100">
+                            Q1 Journal
+                        </span>
+                        <span class="bg-slate-50 text-slate-500 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] border border-slate-100">
+                            Journal of Hazardous Materials
+                        </span>
+                    </div>
+                    <a href="https://doi.org/10.1016/j.jhazmat.2025.139231" target="_blank" class="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all">
+                        <i class="fas fa-external-link-alt text-sm"></i>
+                    </a>
+                </div>
+
+                <h3 class="text-xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                    Environmental forensics of the X-press pearl disaster: Uncovering the internal micro-structural transformations in marine microplastics
+                </h3>
+                
+                <p class="mt-4 text-[10px] font-black text-slate-400 uppercase tracking-widest">
+                    Published 2025 • DOI: 10.1016/j.jhazmat.2025.139231
+                </p>
+            </div><br>
+
+            <div class="p-8 bg-white rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500">
+                <div class="flex flex-wrap justify-between items-center gap-4 mb-6">
+                    <div class="flex gap-3">
+                        <span class="bg-emerald-50 text-emerald-600 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] border border-emerald-100">
+                            Q1 Journal
+                        </span>
+                        <span class="bg-slate-50 text-slate-500 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] border border-slate-100">
+                            Royal Society of Chemistry
+                        </span>
+                    </div>
+                    <a href="https://doi.org/10.1016/j.jhazmat.2025.139231" target="_blank" class="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all">
+                        <i class="fas fa-external-link-alt text-sm"></i>
+                    </a>
+                </div>
+
+                <h3 class="text-xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                    OCT Reveals Microplastics Release from Nylon Tea Bags in Simulated Brewed Tea Infusions
+                </h3>
+                
+                <p class="mt-4 text-[10px] font-black text-slate-400 uppercase tracking-widest">
+                    Published 2025 • DOI: 10.1016/j.jhazmat.2025.139231
+                </p>
+            </div>
+
+
+        </section>
+
+        <section>
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-2xl font-extrabold mb-12 flex items-center text-blue-600 tracking-tight">
+                <span class="w-10 h-1 bg-blue-600 mr-4 rounded-full"></span>
+                Scholarly Engagement
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="group cursor-zoom-in" onclick="openModal(this)">
+                    <div class="relative overflow-hidden rounded-[2rem] shadow-md border-2 border-transparent group-hover:border-blue-500 transition-all duration-300">
+                        <img src="images_com/spi2.webp" 
+                            data-full-title="Research presentation at Industry Expo 2024"
+                            data-full-desc="Presented a third-year undergraduate research project at the International Industrial Expo 2024, South Asia’s largest industrial exhibition."
+                            class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fas fa-expand text-white text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="mt-4 px-2 text-center">
+                        <h4 class="font-bold text-slate-900 text-lg">Research presentation at <b><i>Industry Expo 2024</i></b></h4>
+                        <p class="text-slate-500 text-sm mt-1 uppercase tracking-widest font-semibold">Presenting to Industry Leaders</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+            
+    <div id="lightbox" class="fixed inset-0 z-[100] hidden bg-slate-950/98 flex flex-col items-center justify-center p-6 backdrop-blur-md">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-950 text-5xl font-light hover:text-blue-600 transition-all z-[110]">&times;</button>        
+            
+            <div class="max-w-5xl w-full flex flex-col items-center">
+                <img id="lightbox-img" src="" class="max-h-[60vh] rounded-2xl shadow-2xl border border-white/10 transform scale-95 transition-transform duration-500">
+                
+                <div class="mt-8 text-center max-w-2xl animate-fade-in">
+                    <h3 id="modal-title" class="text-black text-2xl md:text-3xl font-black tracking-tight mb-4"></h3>
+                    <p id="modal-desc" class="text-slate-400 text-lg leading-relaxed"></p>
+                </div>
+            </div>
+    </div>
+
+    <script>
+            function openModal(element) {
+                const modal = document.getElementById('lightbox');
+                const img = document.getElementById('lightbox-img');
+                const titleField = document.getElementById('modal-title');
+                const descField = document.getElementById('modal-desc');
+                
+                // Find the image inside the clicked div
+                const clickedImg = element.querySelector('img');
+                
+                modal.classList.remove('hidden');
+                img.src = clickedImg.src;
+                titleField.innerText = clickedImg.getAttribute('data-full-title');
+                descField.innerText = clickedImg.getAttribute('data-full-desc');
+                
+                setTimeout(() => {
+                    img.classList.remove('scale-95');
+                    img.classList.add('scale-100');
+                }, 10);
+                
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                const modal = document.getElementById('lightbox');
+                const img = document.getElementById('lightbox-img');
+                img.classList.add('scale-95');
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+
+            document.getElementById('lightbox').addEventListener('click', function(e) {
+                if (e.target === this) closeModal();
+            });
+    </script>
+
+    <style>
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            .animate-fade-in { animation: fadeIn 0.8s ease forwards; }
+    </style>
+    </main>
+
+    <footer class="py-20 bg-slate-900">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-slate-500 uppercase tracking-[0.4em] font-bold text-[10px] mb-8">Contact & Collaborations</p>
+            <div class="flex justify-center gap-10 text-white text-2xl mb-12">
+                <a href="https://www.linkedin.com/in/bimsara-sandaruwan-977052200/" class="hover:text-blue-500 transition"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/BimsaraS99" class="hover:text-blue-500 transition"><i class="fab fa-github"></i></a>
+                <a href="https://www.youtube.com/c/ideaPacklk" class="hover:text-red-500 transition"><i class="fab fa-youtube"></i></a>
+                <a href="https://scholar.google.com/citations?user=uux83QUAAAAJ&hl=en" class="hover:text-blue-300 transition" target="_blank" rel="noopener"> <i class="fas fa-graduation-cap"></i> </a>
+                <a href="#"
+                onclick="event.preventDefault(); document.getElementById('contactModal').classList.remove('hidden');"
+                class="hover:text-blue-300 transition">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <div class="h-px w-20 bg-slate-800 mx-auto mb-8"></div>
+            <p class="text-slate-500 text-xs font-medium tracking-widest">© 2025 BimsaraS99 • INDUSTRY X ACADEMIA</p>
+        </div>
+    </footer>
+
+    <div id="contactModal"
+        onclick="this.classList.add('hidden')"
+        class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+
+        <div onclick="event.stopPropagation()"
+            class="bg-gray-900 text-white rounded-xl p-6 w-80 relative text-sm">
+
+            <!-- Close button -->
+            <button onclick="document.getElementById('contactModal').classList.add('hidden')"
+                    class="absolute top-2 right-3 text-gray-400 hover:text-white text-xl">
+                &times;
+            </button>
+
+            <h3 class="text-lg font-semibold mb-4 text-center">Contact Details</h3>
+
+            <p class="mb-3">
+                <strong>Email:</strong><br>
+                <span class="text-blue-400">bimsaras99@gmail.com</span>
+            </p>
+
+            <p>
+                <strong>Phone / Whatsapp:</strong><br>
+                <span class="text-green-400">+94 76 650 7631</span>
+            </p>
+        </div>
+    </div>
+
+
+</body>
+</html>

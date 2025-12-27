@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bimsara | Industry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
+    </style>
+    <link rel="icon" type="image/png" href="images_com/icon.webp">
+</head>
+<body class="bg-[#fcfdfe] text-slate-900">
+
+    <nav class="glass border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="font-extrabold text-2xl bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent tracking-tighter">
+                B I M S A R A . o n l i n e
+            </a>
+
+            <div class="hidden md:flex space-x-10 font-semibold text-sm uppercase tracking-widest text-slate-500">
+                <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+                <a href="industry.html" class="hover:text-blue-600 transition">Industry</a>
+                <a href="research.html" class="hover:text-blue-600 transition">Research</a>
+                <a href="awards.html" class="hover:text-blue-600 transition">Awards</a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-slate-600 focus:outline-none p-2">
+                <i class="fas fa-bars text-2xl" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden glass border-t border-slate-100 animate-in slide-in-from-top duration-300">
+            <div class="px-6 py-8 flex flex-col space-y-6 font-bold text-xs uppercase tracking-[0.3em] text-slate-500">
+                <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+                <a href="industry.html" class="hover:text-blue-600 transition">Industry</a>
+                <a href="research.html" class="hover:text-blue-600 transition">Research</a>
+                <a href="awards.html" class="hover:text-blue-600 transition">Awards</a>
+            </div>
+        </div>
+    </nav>
+
+        <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            // Toggle the menu visibility
+            mobileMenu.classList.toggle('hidden');
+            
+            // Change icon from 'bars' to 'times' (X) when open
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            }
+        });
+
+        // Close menu if a link is clicked
+        const navLinks = mobileMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.replace('fa-times', 'fa-bars');
+            });
+        });
+    </script>
+
+    <div id="projectModal" class="fixed inset-0 z-[100] hidden bg-slate-950/95 flex flex-col items-center justify-center p-6 backdrop-blur-md">
+        <button onclick="closeProjectModal()" class="absolute top-6 right-6 text-white text-5xl font-light hover:text-blue-400 transition-all z-[110]">&times;</button>
+        
+        <div class="max-w-5xl w-full flex flex-col items-center">
+            <h3 id="projectModalTitle" class="text-white text-2xl md:text-3xl font-black tracking-tight mb-8"></h3>
+            
+            <div class="relative w-full flex items-center justify-center">
+                <button id="prevBtn" class="absolute left-0 bg-white/10 hover:bg-white/20 text-white w-12 h-12 rounded-full hidden"><i class="fas fa-chevron-left"></i></button>
+                
+                <img id="projectModalImg" src="" class="max-h-[70vh] rounded-2xl shadow-2xl border border-white/10 transition-all duration-500 transform scale-95">
+                
+                <button id="nextBtn" class="absolute right-0 bg-white/10 hover:bg-white/20 text-white w-12 h-12 rounded-full hidden"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            
+            <p id="imageCounter" class="mt-6 text-slate-500 text-sm font-bold tracking-widest uppercase"></p>
+        </div>
+    </div>
+
+    <main class="max-w-4xl mx-auto py-20 px-6">
+        <header class="mb-16">
+            <h1 class="text-5xl font-extrabold tracking-tighter text-slate-900 mb-4">Industrial Portfolio</h1>
+            <p class="text-lg text-slate-500 font-medium">Solving complex problems through scalable engineering.</p>
+        </header>
+
+        <section class="mb-24">
+            <h2 class="text-2xl font-extrabold mb-12 flex items-center text-blue-600 tracking-tight">
+                <span class="w-10 h-1 bg-blue-600 mr-4 rounded-full"></span>
+                Professional Experience
+            </h2>
+
+            <div class="relative border-l-2 border-slate-100 ml-4 md:ml-0"> 
+
+                <div class="mb-16 relative pl-10">
+                    <div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-blue-600 ring-4 ring-blue-50"></div>
+                    <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
+                            <div>
+                                <h3 class="text-2xl font-extrabold text-slate-900 tracking-tight">AI & Computer Vision Engineer</h3>
+                                <p class="text-blue-600 font-bold">EVOQ Systems (Colombo, Sri Lanka) • Hybrid</p>
+                            </div>
+                            <span class="bg-slate-50 text-slate-500 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest border border-slate-100">Dec 2024 — Present</span>
+                        </div>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6">Developing advanced AI solutions and computer vision architectures, leveraging Python and C++ for high-performance system engineering.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold rounded-lg">Python</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold rounded-lg">C++</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold rounded-lg">Computer Vision</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-16 relative pl-10">
+                    <div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-blue-600 ring-4 ring-blue-50"></div>
+                    <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
+                            <div>
+                                <h3 class="text-2xl font-extrabold text-slate-900 tracking-tight">Computer Vision Engineer (Contact)</h3>
+                                <p class="text-blue-600 font-bold">Thullex (Berlin, Germany) • Remote</p>
+                            </div>
+                            <span class="bg-slate-50 text-slate-500 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest border border-slate-100">Jul 2024 — Present</span>
+                        </div>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6">Contributing to deep learning algorithm development and international software projects focused on advanced visual recognition systems.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold rounded-lg">Deep Learning</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold rounded-lg">Algorithm Dev</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold rounded-lg">Remote Collaboration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-16 relative pl-10">
+                    <div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-slate-200 ring-4 ring-slate-50"></div>
+                    <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
+                            <div>
+                                <h3 class="text-2xl font-extrabold text-slate-900 tracking-tight">Undergraduate Researcher (Part-time)</h3>
+                                <p class="text-blue-600 font-bold">MAS Linea Aqua (Colombo, Sri Lanka) • Onsite</p>
+                            </div>
+                            <span class="bg-slate-50 text-slate-500 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest border border-slate-100">Aug 2023 — Jul 2024</span>
+                        </div>
+                        <p class="text-slate-700 font-bold text-sm mb-3">Project: Intelligent Ultrasonic Tacking Robotic System</p>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6">Developed intelligent tracking algorithms for robotic systems specifically designed for the apparel manufacturing industry.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded-lg">Robotics</span>
+                            <span class="px-3 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded-lg">Apparel Automation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative pl-10">
+                    <div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-slate-200 ring-4 ring-slate-50"></div>
+                    <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
+                            <div>
+                                <h3 class="text-2xl font-extrabold text-slate-900 tracking-tight">R&D Intern (Python Development)</h3>
+                                <p class="text-blue-600 font-bold">MAS Linea Aqua (Colombo, Sri Lanka) • Onsite</p>
+                            </div>
+                            <span class="bg-slate-50 text-slate-500 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest border border-slate-100">Jan 2023 — Jul 2023</span>
+                        </div>
+                        <ul class="text-slate-500 text-sm leading-relaxed mb-6 space-y-3">
+                            <li class="flex items-start gap-3 font-medium"><i class="fas fa-check-circle text-blue-500 mt-1"></i> Trained deep learning models using PyTorch and YOLO frameworks for quality inspection.</li>
+                            <li class="flex items-start gap-3 font-medium"><i class="fas fa-check-circle text-blue-500 mt-1"></i> Developed vision-based fabric alignment systems using OpenCV and Hand-eye calibration.</li>
+                            <li class="flex items-start gap-3 font-medium"><i class="fas fa-check-circle text-blue-500 mt-1"></i> Backend development using Flask/Django and PLC/Microcontroller programming.</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded-lg">PyTorch</span>
+                            <span class="px-3 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded-lg">YOLO</span>
+                            <span class="px-3 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded-lg">OpenCV</span>
+                            <span class="px-3 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded-lg">SolidWorks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-[#fcfdfe]">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-2xl font-extrabold mb-12 flex items-center text-blue-600 tracking-tight">
+                    <span class="w-10 h-1 bg-blue-600 mr-4 rounded-full"></span>
+                    Featured Projects
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                    <div class="group bg-white rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col cursor-pointer" 
+                        onclick="openProjectGallery('Intelligent Tacking Machine', ['images_com/ultra1.webp', 'images_com/ultra2.webp', 'images_com/ultra3.webp'])">
+                        <div class="relative h-52 overflow-hidden bg-slate-200">
+                            <img src="images_com/ultra1.webp" alt="Ultrasonic Tacking Machine" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-8 flex-grow flex flex-col">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center"><i class="fas fa-robot"></i></div>
+                                <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest">Linea Aqua - 2024</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-lg mb-2 tracking-tight">Intelligent Tacking Machine</h3>
+                            <p class="text-slate-500 text-xs leading-relaxed mb-6">Robotic system for apparel industry integrating PyQt GUI and Arduino-PLC logic.</p>
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                <span class="px-2 py-1 bg-slate-50 text-slate-400 text-[8px] font-black rounded uppercase">TensorFlow</span>
+                                <span class="px-2 py-1 bg-slate-50 text-slate-400 text-[8px] font-black rounded uppercase">PCB Design</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group bg-white rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col cursor-pointer"
+                        onclick="openProjectGallery('AI Fabric Seam Inspector', ['images_com/spi1.webp', 'images_com/spi2.webp', 'images_com/spi3.webp'])">
+                        <div class="relative h-52 overflow-hidden bg-slate-200">
+                            <img src="images_com/spi1.webp" alt="SPI Detection" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-8 flex-grow flex flex-col">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center"><i class="fas fa-microscope"></i></div>
+                                <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest">Linea Aqua - 2024</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-lg mb-2 tracking-tight">AI Fabric Seam Inspector</h3>
+                            <p class="text-slate-500 text-xs leading-relaxed mb-6">Deep learning system for real-time SPI quality inspection. Presented at Expo 2024.</p>
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                <span class="px-2 py-1 bg-slate-50 text-slate-400 text-[8px] font-black rounded uppercase">PyTorch</span>
+                                <span class="px-2 py-1 bg-slate-50 text-slate-400 text-[8px] font-black rounded uppercase">OpenCV</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group bg-white rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col cursor-pointer"
+                        onclick="openProjectGallery('CV Fabric Alignment', ['images_com/cv1.webp', 'images_com/cv2.webp'])">
+                        <div class="relative h-52 overflow-hidden bg-slate-200">
+                            <img src="images_com/cv1.webp" alt="Fabric Alignment" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-8 flex-grow flex flex-col">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center"><i class="fas fa-vector-square"></i></div>
+                                <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest">Linea Aqua - 2024</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-lg mb-2 tracking-tight">CV Fabric Alignment</h3>
+                            <p class="text-slate-500 text-xs leading-relaxed mb-6">Vision-based mechanism for automated fabric edge detection and alignment.</p>
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                <span class="px-2 py-1 bg-slate-50 text-slate-400 text-[8px] font-black rounded uppercase">SolidWorks</span>
+                                <span class="px-2 py-1 bg-slate-50 text-slate-400 text-[8px] font-black rounded uppercase">C++</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://github.com/BimsaraS99/Neural-Network-From-Scratch-with-NumPy" target="_blank" class="group bg-white rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col">
+                        <div class="relative h-52 overflow-hidden bg-slate-200">
+                            <img src="images_com/nn.webp" alt="NN from Scratch" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-8 flex-grow flex flex-col">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-10 h-10 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center"><i class="fas fa-brain"></i></div>
+                                <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest">Mathematics - 2024</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-lg mb-2 tracking-tight">NN from Scratch (NumPy)</h3>
+                            <p class="text-slate-500 text-xs leading-relaxed mb-6">Building a digit recognition neural network from pure math without using ML frameworks.</p>
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                <span class="px-2 py-1 bg-slate-50 text-slate-400 text-[8px] font-black rounded uppercase">NumPy</span>
+                                <span class="px-2 py-1 bg-slate-50 text-slate-400 text-[8px] font-black rounded uppercase">Algorithms</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/BimsaraS99/Smart-Pill-Remider" target="_blank" class="group bg-white rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col">
+                        <div class="relative h-52 overflow-hidden bg-slate-200">
+                            <img src="images_com/blind.webp" alt="Smart Pill Reminder" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-8 flex-grow flex flex-col">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-10 h-10 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center"><i class="fas fa-capsules"></i></div>
+                                <span class="text-[9px] font-black text-yellow-600 uppercase tracking-widest font-bold italic">Awarded Proj - 2018</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-lg mb-2 tracking-tight">IoT Pill Reminder for Blind</h3>
+                            <p class="text-slate-500 text-xs leading-relaxed mb-6">Accessibility IoT device using Atmega microcontrollers to assist visually impaired people with medicine.</p>
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                <span class="px-2 py-1 bg-slate-50 text-slate-400 text-[8px] font-black rounded uppercase">Arduino</span>
+                                <span class="px-2 py-1 bg-slate-50 text-slate-400 text-[8px] font-black rounded uppercase">IoT</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/BimsaraS99/Atmega16-Motor-Controller" target="_blank" class="group bg-white rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col">
+                        <div class="relative h-52 overflow-hidden bg-slate-200">
+                            <img src="images_com/dc.webp" alt="Motor Controller" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-8 flex-grow flex flex-col">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-10 h-10 bg-red-50 text-red-600 rounded-xl flex items-center justify-center"><i class="fas fa-bolt"></i></div>
+                                <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest">Embedded Sys - 2023</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-lg mb-2 tracking-tight">DC Motor Controller</h3>
+                            <p class="text-slate-500 text-xs leading-relaxed mb-6">Controller with overload/temperature protection. Includes PCB design and C firmware.</p>
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                <span class="px-2 py-1 bg-slate-50 text-slate-400 text-[8px] font-black rounded uppercase">Atmel AVR</span>
+                                <span class="px-2 py-1 bg-slate-50 text-slate-400 text-[8px] font-black rounded uppercase">C++</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://online.fliphtml5.com/zeptx/cnlj/" target="_blank" class="group bg-white rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col">
+                        <div class="relative h-52 overflow-hidden bg-slate-200">
+                            <img src="images_com/py.webp" alt="Python MCQ Book" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-8 flex-grow flex flex-col">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-10 h-10 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center"><i class="fas fa-book"></i></div>
+                                <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest">Publication - 2019</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-lg mb-2 tracking-tight">Python MCQ Book for A/L ICT</h3>
+                            <p class="text-slate-500 text-xs leading-relaxed mb-6">Author of a specialized 500+ MCQ question and answer guide for Advanced Level students.</p>
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                <span class="px-2 py-1 bg-slate-50 text-slate-400 text-[8px] font-black rounded uppercase">Python</span>
+                                <span class="px-2 py-1 bg-slate-50 text-slate-400 text-[8px] font-black rounded uppercase">Education</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/BimsaraS99/Arduino-Game-Boy-with-6-Games-for-8x8-LED-Matrix-Panel" target="_blank" class="group bg-white rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col">
+                        <div class="relative h-52 overflow-hidden bg-slate-200">
+                            <img src="images_com/gb.webp" alt="LED Game Boy" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-8 flex-grow flex flex-col">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-10 h-10 bg-cyan-50 text-cyan-600 rounded-xl flex items-center justify-center"><i class="fas fa-gamepad"></i></div>
+                                <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest">Hardware Dev - 2016</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-lg mb-2 tracking-tight">8x8 LED Matrix Game Boy</h3>
+                            <p class="text-slate-500 text-xs leading-relaxed mb-6">Handheld console with 6 games using Arduino and 74HC595 shift registers.</p>
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                <span class="px-2 py-1 bg-slate-50 text-slate-400 text-[8px] font-black rounded uppercase">Arduino</span>
+                                <span class="px-2 py-1 bg-slate-50 text-slate-400 text-[8px] font-black rounded uppercase">Electronics</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="group bg-white rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col cursor-pointer"
+                        onclick="openProjectGallery('PID Maze Runner Robot', ['images_com/robo.webp'])">
+                        <div class="relative h-52 overflow-hidden bg-slate-200">
+                            <img src="images_com/robo.webp" alt="Maze Runner Robot" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-8 flex-grow flex flex-col">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-10 h-10 bg-rose-50 text-rose-600 rounded-xl flex items-center justify-center"><i class="fas fa-robot"></i></div>
+                                <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest">Robofest - 2017</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-lg mb-2 tracking-tight">PID Maze Runner Robot</h3>
+                            <p class="text-slate-500 text-xs leading-relaxed mb-6">Autonomous robot with PID line-following and maze-solving algorithms for SLIIT Robofest.</p>
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                <span class="px-2 py-1 bg-slate-50 text-slate-400 text-[8px] font-black rounded uppercase">PID Control</span>
+                                <span class="px-2 py-1 bg-slate-50 text-slate-400 text-[8px] font-black rounded uppercase">C++</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-2xl font-extrabold mb-12 flex items-center text-blue-600 tracking-tight">
+                    <span class="w-10 h-1 bg-blue-600 mr-4 rounded-full"></span>
+                    Impacat in Action
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <div class="group cursor-zoom-in" onclick="openModal(this)">
+                        <div class="relative overflow-hidden rounded-[2rem] shadow-md border-2 border-transparent group-hover:border-blue-500 transition-all duration-300">
+                            <img src="images_com/moments_1.webp" 
+                                data-full-title="FYP Presentation to Desamanya Mahesh Amalean, Founder of MAS Holdings"
+                                data-full-desc="Excited to present my final-year research project, sponsored by Linea Aqua, to Desamanya Mahesh Amalean, founder of MAS Holdings, during his visit to the automation section."
+                                class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+                            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <i class="fas fa-expand text-white text-3xl"></i>
+                            </div>
+                        </div>
+                        <div class="mt-4 px-2 text-center">
+                            <h4 class="font-bold text-slate-900 text-lg">FYP demonstration to <b><i>Desamanya Mahesh Amalean</i></b></h4>
+                            <p class="text-slate-500 text-sm mt-1 uppercase tracking-widest font-semibold">Presenting to Industry Leaders</p>
+                        </div>
+                    </div>
+
+                    <div class="group cursor-zoom-in" onclick="openModal(this)">
+                        <div class="relative overflow-hidden rounded-[2rem] shadow-md border-2 border-transparent group-hover:border-blue-500 transition-all duration-300">
+                            <img src="images_com/moments_2.webp" 
+                                data-full-title="FYP demonstration at MAS Nut & Bolt Internal Exhibition"
+                                data-full-desc="Showcased my final-year research project with Linea Aqua at the Nuts N Bolts exhibition by MAS Machine Build, held at Twinery – Innovations by MAS."
+                                class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+                            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <i class="fas fa-expand text-white text-3xl"></i>
+                            </div>
+                        </div>
+                        <div class="mt-4 px-2 text-center">
+                            <h4 class="font-bold text-slate-900 text-lg">FYP demonstration at <b><i>MAS Nut & Bolt Internal Exhibition</i></b></h4>
+                            <p class="text-slate-500 text-sm mt-1 uppercase tracking-widest font-semibold">Engaging with Industry Leaders</p>
+                        </div>
+                    </div>
+
+                    <div class="group cursor-zoom-in" onclick="openModal(this)">
+                        <div class="relative overflow-hidden rounded-[2rem] shadow-md border-2 border-transparent group-hover:border-blue-500 transition-all duration-300">
+                            <img src="images_com/moments_3.webp" 
+                                data-full-title="R&D System Implementation at MAS Fabric Park"
+                                data-full-desc="Implemented a research and development system at MAS Fabric Park, showcasing the integration of advanced technologies in industrial settings."
+                                class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+                            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <i class="fas fa-expand text-white text-3xl"></i>
+                            </div>
+                        </div>
+                        <div class="mt-4 px-2 text-center">
+                            <h4 class="font-bold text-slate-900 text-lg">R&D System Implementation at <b><i>MAS Fabric Park</i></b></h4>
+                            <p class="text-slate-500 text-sm mt-1 uppercase tracking-widest font-semibold">Industrial Systems Deployment</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="py-20 bg-slate-900">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-slate-500 uppercase tracking-[0.4em] font-bold text-[10px] mb-8">Contact & Collaborations</p>
+            <div class="flex justify-center gap-10 text-white text-2xl mb-12">
+                <a href="https://www.linkedin.com/in/bimsara-sandaruwan-977052200/" class="hover:text-blue-500 transition"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/BimsaraS99" class="hover:text-blue-500 transition"><i class="fab fa-github"></i></a>
+                <a href="https://www.youtube.com/c/ideaPacklk" class="hover:text-red-500 transition"><i class="fab fa-youtube"></i></a>
+                <a href="https://scholar.google.com/citations?user=uux83QUAAAAJ&hl=en" class="hover:text-blue-300 transition" target="_blank" rel="noopener"> <i class="fas fa-graduation-cap"></i> </a>
+                <a href="#"
+                onclick="event.preventDefault(); document.getElementById('contactModal').classList.remove('hidden');"
+                class="hover:text-blue-300 transition">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <div class="h-px w-20 bg-slate-800 mx-auto mb-8"></div>
+            <p class="text-slate-500 text-xs font-medium tracking-widest">© 2025 BimsaraS99 • INDUSTRY X ACADEMIA</p>
+        </div>
+    </footer>
+
+    <div id="contactModal"
+        onclick="this.classList.add('hidden')"
+        class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+
+        <div onclick="event.stopPropagation()"
+            class="bg-gray-900 text-white rounded-xl p-6 w-80 relative text-sm">
+
+            <!-- Close button -->
+            <button onclick="document.getElementById('contactModal').classList.add('hidden')"
+                    class="absolute top-2 right-3 text-gray-400 hover:text-white text-xl">
+                &times;
+            </button>
+
+            <h3 class="text-lg font-semibold mb-4 text-center">Contact Details</h3>
+
+            <p class="mb-3">
+                <strong>Email:</strong><br>
+                <span class="text-blue-400">bimsaras99@gmail.com</span>
+            </p>
+
+            <p>
+                <strong>Phone / Whatsapp:</strong><br>
+                <span class="text-green-400">+94 76 650 7631</span>
+            </p>
+        </div>
+    </div>
+
+    <div id="lightbox" class="fixed inset-0 z-[100] hidden bg-white flex flex-col items-center justify-center p-6 backdrop-blur-md">
+        <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-950 text-5xl font-light hover:text-blue-600 transition-all z-[110]">&times;</button>        
+        <div class="max-w-5xl w-full flex flex-col items-center">
+            <img id="lightbox-img" src="" class="max-h-[60vh] rounded-2xl shadow-2xl border border-white/10 transform scale-95 transition-transform duration-500">
+            
+            <div class="mt-8 text-center max-w-2xl animate-fade-in">
+                <h3 id="modal-title" class="text-black text-2xl md:text-3xl font-black tracking-tight mb-4"></h3>
+                <p id="modal-desc" class="text-slate-400 text-lg leading-relaxed"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(element) {
+            const modal = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            const titleField = document.getElementById('modal-title');
+            const descField = document.getElementById('modal-desc');
+            
+            // Find the image inside the clicked div
+            const clickedImg = element.querySelector('img');
+            
+            modal.classList.remove('hidden');
+            img.src = clickedImg.src;
+            titleField.innerText = clickedImg.getAttribute('data-full-title');
+            descField.innerText = clickedImg.getAttribute('data-full-desc');
+            
+            setTimeout(() => {
+                img.classList.remove('scale-95');
+                img.classList.add('scale-100');
+            }, 10);
+            
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.classList.add('scale-95');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+    </script>
+
+
+    <script>
+        let currentImages = [];
+        let currentIndex = 0;
+
+        function openProjectGallery(title, images) {
+            currentImages = images;
+            currentIndex = 0;
+            
+            document.getElementById('projectModalTitle').innerText = title;
+            updateModalImage();
+            
+            document.getElementById('projectModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+
+            // Show/Hide Nav Buttons based on image count
+            const showNav = images.length > 1;
+            document.getElementById('prevBtn').style.display = showNav ? 'block' : 'none';
+            document.getElementById('nextBtn').style.display = showNav ? 'block' : 'none';
+        }
+
+        function updateModalImage() {
+            const img = document.getElementById('projectModalImg');
+            img.classList.add('scale-95', 'opacity-0');
+            
+            setTimeout(() => {
+                img.src = currentImages[currentIndex];
+                document.getElementById('imageCounter').innerText = `Image ${currentIndex + 1} of ${currentImages.length}`;
+                img.classList.remove('scale-95', 'opacity-0');
+            }, 200);
+        }
+
+        function closeProjectModal() {
+            document.getElementById('projectModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.getElementById('nextBtn').onclick = () => {
+            currentIndex = (currentIndex + 1) % currentImages.length;
+            updateModalImage();
+        };
+
+        document.getElementById('prevBtn').onclick = () => {
+            currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+            updateModalImage();
+        };
+
+        // Close on click background
+        document.getElementById('projectModal').onclick = function(e) {
+            if (e.target === this) closeProjectModal();
+        };
+    </script>
+
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in { animation: fadeIn 0.8s ease forwards; }
+    </style>
+
+
+</body>
+</html>

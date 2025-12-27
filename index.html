@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bimsara | Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
+        .hero-gradient { background: radial-gradient(circle at top right, #eff6ff, #f8fafc); }
+        .social-btn { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .social-btn:hover { transform: translateY(-4px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+        .path-card { transition: all 0.4s ease; }
+        .path-card:hover { transform: scale(1.02); }
+    </style>
+    <link rel="icon" type="image/png" href="images_com/icon.webp">
+</head>
+<body class="bg-[#fcfdfe] text-slate-900 overflow-x-hidden">
+
+    <nav class="glass border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="font-extrabold text-2xl bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent tracking-tighter">
+                B I M S A R A . o n l i n e
+            </a>
+
+            <div class="hidden md:flex space-x-10 font-semibold text-sm uppercase tracking-widest text-slate-500">
+                <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+                <a href="industry.html" class="hover:text-blue-600 transition">Industry</a>
+                <a href="research.html" class="hover:text-blue-600 transition">Research</a>
+                <a href="awards.html" class="hover:text-blue-600 transition">Awards</a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-slate-600 focus:outline-none p-2">
+                <i class="fas fa-bars text-2xl" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden glass border-t border-slate-100 animate-in slide-in-from-top duration-300">
+            <div class="px-6 py-8 flex flex-col space-y-6 font-bold text-xs uppercase tracking-[0.3em] text-slate-500">
+                <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+                <a href="industry.html" class="hover:text-blue-600 transition">Industry</a>
+                <a href="research.html" class="hover:text-blue-600 transition">Research</a>
+                <a href="awards.html" class="hover:text-blue-600 transition">Awards</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            // Toggle the menu visibility
+            mobileMenu.classList.toggle('hidden');
+            
+            // Change icon from 'bars' to 'times' (X) when open
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            }
+        });
+
+        // Close menu if a link is clicked
+        const navLinks = mobileMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.replace('fa-times', 'fa-bars');
+            });
+        });
+    </script>
+
+    <header class="hero-gradient py-20 md:py-32">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                <img src="images_com\profile-pic.webp" alt="Profile" class="relative w-64 h-64 md:w-80 md:h-80 rounded-3xl shadow-2xl object-cover grayscale-[20%] hover:grayscale-0 transition duration-500">
+            </div>
+            
+            <div class="text-center md:text-left flex-1">
+                <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-blue-700 bg-blue-100 rounded-full uppercase">Problem Solver</span>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 tracking-tight leading-tight">
+                    Hi, I'm <span class="text-blue-600">Bimsara Sandaruwan</span>
+                </h1>
+                <p class="text-xl text-slate-500 mb-10 leading-relaxed max-w-2xl font-medium">
+                    I thrive at the intersection of <span class="text-slate-900">industrial innovation</span> and <span class="text-slate-900">academic rigor</span>. Bridging research insights with scalable enterprise solutions.
+                </p>
+
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                    <a href="https://www.linkedin.com/in/bimsara-sandaruwan-977052200/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="social-btn bg-[#0077b5] text-white px-6 py-3 rounded-xl flex items-center gap-3">
+                        <i class="fab fa-linkedin-in text-lg"></i> 
+                        <span class="font-semibold">LinkedIn</span>
+                    </a>
+
+                    <a href="https://github.com/BimsaraS99" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="social-btn bg-slate-900 text-white px-6 py-3 rounded-xl flex items-center gap-3">
+                        <i class="fab fa-github text-lg"></i> 
+                        <span class="font-semibold">GitHub</span>
+                    </a>
+
+                    <a href="https://scholar.google.com/citations?user=uux83QUAAAAJ&hl=en" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="social-btn bg-white text-slate-700 border border-slate-200 px-6 py-3 rounded-xl flex items-center gap-3 shadow-sm">
+                        <i class="fas fa-graduation-cap text-blue-600 text-lg"></i> 
+                        <span class="font-semibold">Scholar</span>
+                    </a>
+
+                    <a href="https://www.youtube.com/c/ideaPacklk" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="social-btn bg-[#ff0000] text-white px-6 py-3 rounded-xl flex items-center gap-3">
+                        <i class="fab fa-youtube text-lg"></i> 
+                        <span class="font-semibold">YouTube</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-20">
+            <div>
+                <h2 class="text-3xl font-extrabold mb-12 flex items-center text-slate-900 tracking-tight">
+                    <span class="w-10 h-1 bg-blue-600 mr-4 rounded-full"></span> Education
+                </h2>
+                <div class="space-y-12">
+                    <div class="relative pl-8 border-l-2 border-blue-600">
+                        <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 ring-4 ring-blue-50"></div>
+                        <h3 class="font-bold text-xl text-slate-900">Master of Science (MSc) in AI (R)</h3>
+                        <p class="text-blue-600 font-semibold mb-3">Sri Lanka Institute of Information Technology, Sri Lanka</p>
+                        <p class="text-slate-500 leading-relaxed">Focusing on AI-driven automation and data structures. Active researcher in Faculty of Computing - Expected Graduation 2028</p>
+                    </div>
+                    <div class="relative pl-8 border-l-2 border-slate-200">
+                        <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 ring-4 ring-slate-50"></div>
+                        <h3 class="font-bold text-xl text-slate-900">Bachelor of Engineering Technology (BET) in Mechatronics</h3>
+                        <p class="text-slate-500 font-semibold mb-3">University of Sri Jayewardenepura, Sri Lanka</p>
+                        <p class="text-slate-400">First Class Honors (3.74 / 4.0) - Graduated 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-3xl font-extrabold mb-12 flex items-center text-slate-900 tracking-tight">
+                    <span class="w-10 h-1 bg-blue-600 mr-4 rounded-full"></span> Expertise
+                </h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        
+                        <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100 flex items-center gap-4">
+                            <i class="fas fa-camera text-blue-600"></i>
+                            <span class="font-bold text-sm text-slate-700">Computer Vision</span>
+                        </div>
+
+                        <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100 flex items-center gap-4">
+                            <i class="fas fa-brain text-blue-600"></i>
+                            <span class="font-bold text-sm text-slate-700">AI & Machine Learning</span>
+                        </div>
+
+                        <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100 flex items-center gap-4">
+                            <i class="fas fa-network-wired text-blue-600"></i>
+                            <span class="font-bold text-sm text-slate-700">IoT Systems</span>
+                        </div>
+
+                        <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100 flex items-center gap-4">
+                            <i class="fas fa-industry text-blue-600"></i>
+                            <span class="font-bold text-sm text-slate-700">Industrial Automation 4.0</span>
+                        </div>
+
+                        <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100 flex items-center gap-4">
+                            <i class="fas fa-heartbeat text-blue-600"></i>
+                            <span class="font-bold text-sm text-slate-700">Biomedical Engineering</span>
+                        </div>
+
+                        <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100 flex items-center gap-4">
+                            <i class="fas fa-file-alt text-blue-600"></i>
+                            <span class="font-bold text-sm text-slate-700">Technical Writing</span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-slate-900 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-blue-600 rounded-full filter blur-[120px] opacity-10"></div>
+        <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-8 tracking-tighter italic">Deep Theory. Real-World Execution.</h2>
+            <p class="text-slate-400 text-lg mb-16 max-w-2xl mx-auto font-medium">Choose a path to explore my specific contributions to each field.</p>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-10">
+                <a href="industry.html" class="path-card group bg-white p-12 rounded-[2.5rem] shadow-2xl w-full md:w-[400px]">
+                    <div class="w-20 h-20 bg-blue-50 text-blue-600 rounded-3xl flex items-center justify-center mx-auto mb-8 text-3xl group-hover:rotate-6 transition-transform">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3 class="text-3xl font-black text-slate-900 mb-4 uppercase tracking-tighter">Industry</h3>
+                    <p class="text-slate-500 mb-8 font-medium italic">Leading projects & solving complex business problems.</p>
+                    <span class="inline-flex items-center text-blue-600 font-bold uppercase tracking-widest text-xs">View Projects <i class="fas fa-arrow-right ml-2"></i></span>
+                </a>
+
+                <a href="research.html" class="path-card group bg-blue-800 p-12 rounded-[2.5rem] shadow-2xl w-full md:w-[400px] border border-blue-700">
+                    <div class="w-20 h-20 bg-blue-700 text-white rounded-3xl flex items-center justify-center mx-auto mb-8 text-3xl group-hover:-rotate-6 transition-transform">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="text-3xl font-black text-white mb-4 uppercase tracking-tighter">Research</h3>
+                    <p class="text-blue-200 mb-8 font-medium italic">Academic publications & university collaborations.</p>
+                    <span class="inline-flex items-center text-blue-300 font-bold uppercase tracking-widest text-xs">View Research <i class="fas fa-arrow-right ml-2"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-[#fcfdfe]">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div>
+                    <h2 class="text-4xl font-extrabold text-slate-900 tracking-tight">Content Creation</h2>
+                    <p class="text-slate-500 mt-2 text-lg">Sharing knowledge across three unique platforms.</p>
+                </div>
+                <div class="text-red-600 font-bold flex items-center gap-2">
+                    <i class="fab fa-youtube text-2xl"></i> 3 Channels Active
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition duration-500 flex flex-col items-center text-center">
+                    <div class="w-20 h-20 rounded-full border-4 border-slate-50 shadow-inner mb-6 overflow-hidden bg-slate-100">
+                        <img src="images_com/ideapack-logo.webp" alt="ideaPack lk Logo" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <h3 class="font-bold text-xl mb-4 text-slate-900 tracking-[0.4em]">ideaPack lk</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-8 font-medium">Deep dives into industrial software engineering and system architecture best practices.</p>
+                    <a href="https://www.youtube.com/c/ideaPacklk" target="_blank" rel="noopener noreferrer" class="inline-block py-3 px-6 bg-red-50 text-red-600 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-red-600 hover:text-white transition w-full">Visit Channel</a>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition duration-500 flex flex-col items-center text-center">
+                    <div class="w-20 h-20 rounded-full border-4 border-slate-50 shadow-inner mb-6 overflow-hidden bg-slate-100">
+                        <img src="images_com/bimfree-logo.webp" alt="Academic Insights Logo" class="w-full h-full object-cover">
+                    </div>
+
+                    <h3 class="font-bold text-xl mb-4 text-slate-900 tracking-[0.4em]">Bimsara's Free knowledge</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-8 font-medium">Simplifying research methodology and theoretical concepts for graduate students.</p>
+                    <a href="https://www.youtube.com/@bimsarasandaruwan4402" target="_blank" rel="noopener noreferrer" class="inline-block py-3 px-6 bg-red-50 text-red-600 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-red-600 hover:text-white transition w-full">Visit Channel</a>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition duration-500 flex flex-col items-center text-center">
+                    <div class="w-20 h-20 rounded-full border-4 border-slate-50 shadow-inner mb-6 overflow-hidden bg-slate-100">
+                        <img src="images_com/ideaart-logo.webp" alt="The Hybrid Life Logo" class="w-full h-full object-cover">
+                    </div>
+
+                    <h3 class="font-bold text-xl mb-4 text-slate-900 tracking-[0.4em]">idea Art</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-8 font-medium">Vlogs documenting the journey of balancing industry work and Masters research.</p>
+                    <a href="https://www.youtube.com/@ideaart1970" target="_blank" rel="noopener noreferrer" class="inline-block py-3 px-6 bg-red-50 text-red-600 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-red-600 hover:text-white transition w-full">Visit Channel</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 bg-slate-900">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-slate-500 uppercase tracking-[0.4em] font-bold text-[10px] mb-8">Contact & Collaborations</p>
+            <div class="flex justify-center gap-10 text-white text-2xl mb-12">
+                <a href="https://www.linkedin.com/in/bimsara-sandaruwan-977052200/" class="hover:text-blue-500 transition"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/BimsaraS99" class="hover:text-blue-500 transition"><i class="fab fa-github"></i></a>
+                <a href="https://www.youtube.com/c/ideaPacklk" class="hover:text-red-500 transition"><i class="fab fa-youtube"></i></a>
+                <a href="https://scholar.google.com/citations?user=uux83QUAAAAJ&hl=en" class="hover:text-blue-300 transition" target="_blank" rel="noopener"> <i class="fas fa-graduation-cap"></i> </a>
+                <a href="#"
+                onclick="event.preventDefault(); document.getElementById('contactModal').classList.remove('hidden');"
+                class="hover:text-blue-300 transition">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <div class="h-px w-20 bg-slate-800 mx-auto mb-8"></div>
+            <p class="text-slate-500 text-xs font-medium tracking-widest">© 2025 BimsaraS99 • INDUSTRY X ACADEMIA</p>
+        </div>
+    </footer>
+
+    <div id="contactModal"
+        onclick="this.classList.add('hidden')"
+        class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+
+        <div onclick="event.stopPropagation()"
+            class="bg-gray-900 text-white rounded-xl p-6 w-80 relative text-sm">
+
+            <!-- Close button -->
+            <button onclick="document.getElementById('contactModal').classList.add('hidden')"
+                    class="absolute top-2 right-3 text-gray-400 hover:text-white text-xl">
+                &times;
+            </button>
+
+            <h3 class="text-lg font-semibold mb-4 text-center">Contact Details</h3>
+
+            <p class="mb-3">
+                <strong>Email:</strong><br>
+                <span class="text-blue-400">bimsaras99@gmail.com</span>
+            </p>
+
+            <p>
+                <strong>Phone / Whatsapp:</strong><br>
+                <span class="text-green-400">+94 76 650 7631</span>
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

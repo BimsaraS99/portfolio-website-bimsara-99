@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bimsara | Awards</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
+    </style>
+    <link rel="icon" type="image/png" href="images_com/icon.webp">
+</head>
+<body class="bg-[#fcfdfe] text-slate-900">
+
+    <nav class="glass border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="font-extrabold text-2xl bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent tracking-tighter">
+                B I M S A R A . o n l i n e
+            </a>
+
+            <div class="hidden md:flex space-x-10 font-semibold text-sm uppercase tracking-widest text-slate-500">
+                <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+                <a href="industry.html" class="hover:text-blue-600 transition">Industry</a>
+                <a href="research.html" class="hover:text-blue-600 transition">Research</a>
+                <a href="awards.html" class="hover:text-blue-600 transition">Awards</a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-slate-600 focus:outline-none p-2">
+                <i class="fas fa-bars text-2xl" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden glass border-t border-slate-100 animate-in slide-in-from-top duration-300">
+            <div class="px-6 py-8 flex flex-col space-y-6 font-bold text-xs uppercase tracking-[0.3em] text-slate-500">
+                <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+                <a href="industry.html" class="hover:text-blue-600 transition">Industry</a>
+                <a href="research.html" class="hover:text-blue-600 transition">Research</a>
+                <a href="awards.html" class="hover:text-blue-600 transition">Awards</a>
+            </div>
+        </div>
+    </nav>
+
+        <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            // Toggle the menu visibility
+            mobileMenu.classList.toggle('hidden');
+            
+            // Change icon from 'bars' to 'times' (X) when open
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            }
+        });
+
+        // Close menu if a link is clicked
+        const navLinks = mobileMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.replace('fa-times', 'fa-bars');
+            });
+        });
+    </script>
+
+    <main class="max-w-6xl mx-auto py-24 px-6">
+        <header class="text-center mb-24">
+            <h1 class="text-6xl font-black tracking-tighter mb-6 text-slate-900">Recognition & Honors</h1>
+            <p class="text-lg text-slate-500 max-w-xl mx-auto font-medium leading-relaxed">Celebrating milestones in academic excellence and scientific innovation.</p>
+        </header>
+
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="bg-white p-12 rounded-[3.5rem] border border-slate-100 text-center shadow-sm hover:shadow-2xl transition duration-500 group">
+                <div class="w-24 h-24 bg-blue-50 text-blue-600 rounded-[2rem] flex items-center justify-center mx-auto mb-10 text-4xl group-hover:scale-110 transition-transform">
+                    <i class="fas fa-ranking-star"></i>
+                </div>
+                <h3 class="font-black text-2xl text-slate-900 mb-4 leading-tight">Island Rank 4th</h3>
+                <p class="text-blue-600 font-black text-[11px] uppercase tracking-[0.3em] mb-6">GCE Advanced Level Exam 2018</p>
+                <div class="h-px w-12 bg-slate-100 mx-auto mb-6"></div>
+                <p class="text-slate-500 text-sm leading-relaxed mb-8">
+                    Achieved the distinguished <span class="font-bold text-slate-700">National Island Rank 4th</span> in the Technology Stream. Issued by the Department of Examinations, Sri Lanka.
+                </p>
+                <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Ananda College • Dec 2018</p>
+            </div>
+
+            <div class="bg-white p-12 rounded-[3.5rem] border border-slate-100 text-center shadow-sm hover:shadow-2xl transition duration-500 group">
+                <div class="w-24 h-24 bg-yellow-50 text-yellow-600 rounded-[2rem] flex items-center justify-center mx-auto mb-10 text-4xl group-hover:scale-110 transition-transform">
+                    <i class="fas fa-medal"></i>
+                </div>
+                <h3 class="font-black text-2xl text-slate-900 mb-4 leading-tight">Gold Medal Recipient</h3>
+                <p class="text-yellow-600 font-black text-[11px] uppercase tracking-[0.3em] mb-6">All Island Young Inventors</p>
+                <div class="h-px w-12 bg-slate-100 mx-auto mb-6"></div>
+                <p class="text-slate-500 text-sm leading-relaxed mb-8">
+                    Awarded by the <span class="font-bold text-slate-700">SLAAS</span> for inventing the <strong>"Smart Pill Reminder for the Blind,"</strong> recognizing exceptional skills in scientific research and innovative problem-solving.
+                </p>
+                <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Ananda College • Dec 2017</p>
+            </div>
+        </div>
+
+        <div class="mt-12 text-center">
+            <p class="text-slate-300 font-black text-[10px] uppercase tracking-[0.5em]">Continuing the journey of excellence</p>
+        </div>
+    </main>
+
+    <footer class="py-20 bg-slate-900">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-slate-500 uppercase tracking-[0.4em] font-bold text-[10px] mb-8">Contact & Collaborations</p>
+            <div class="flex justify-center gap-10 text-white text-2xl mb-12">
+                <a href="https://www.linkedin.com/in/bimsara-sandaruwan-977052200/" target="_blank" class="hover:text-blue-500 transition"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/BimsaraS99" target="_blank" class="hover:text-blue-500 transition"><i class="fab fa-github"></i></a>
+                <a href="https://www.youtube.com/c/ideaPacklk" target="_blank" class="hover:text-red-500 transition"><i class="fab fa-youtube"></i></a>
+                <a href="https://scholar.google.com/citations?user=uux83QUAAAAJ&hl=en" target="_blank" class="hover:text-blue-300 transition"> <i class="fas fa-graduation-cap"></i> </a>
+                <a href="#" onclick="event.preventDefault(); document.getElementById('contactModal').classList.remove('hidden');" class="hover:text-blue-300 transition">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <div class="h-px w-20 bg-slate-800 mx-auto mb-8"></div>
+            <p class="text-slate-500 text-xs font-medium tracking-widest uppercase">© 2025 Bimsara Sandaruwan • INDUSTRY X ACADEMIA</p>
+        </div>
+    </footer>
+
+    <div id="contactModal" onclick="this.classList.add('hidden')" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50">
+        <div onclick="event.stopPropagation()" class="bg-gray-900 text-white rounded-[2rem] p-10 w-96 relative border border-slate-800 shadow-2xl">
+            <button onclick="document.getElementById('contactModal').classList.add('hidden')" class="absolute top-6 right-6 text-gray-400 hover:text-white text-2xl transition">&times;</button>
+            <h3 class="text-xl font-black mb-8 text-center tracking-tight">Direct Contact</h3>
+            <div class="space-y-6">
+                <div>
+                    <p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold mb-2">Email Address</p>
+                    <a href="mailto:bimsaras99@gmail.com" class="text-blue-400 font-bold hover:underline">bimsaras99@gmail.com</a>
+                </div>
+                <div>
+                    <p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold mb-2">WhatsApp / Phone</p>
+                    <p class="text-green-400 font-bold">+94 76 650 7631</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

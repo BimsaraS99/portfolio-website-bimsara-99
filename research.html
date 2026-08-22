@@ -1,322 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bimsara | Research</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
-    </style>
-    <link rel="icon" type="image/png" href="images_com/icon.webp">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research · Bimsara Sandaruwan Kahandawala</title>
+  <meta name="description" content="Peer-reviewed research by Bimsara Sandaruwan Kahandawala in optical coherence tomography, computer vision, and biomedical imaging — 5 journal publications, co-first author on 4.">
+  <meta property="og:title" content="Research · Bimsara Sandaruwan Kahandawala">
+  <meta property="og:description" content="Optical imaging, computer vision & biomedical diagnostics — 5 peer-reviewed journal papers.">
+  <meta property="og:image" content="https://bimsara.online/images_com/profile-pic.webp">
+  <link rel="icon" type="image/png" href="images_com/icon.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,560;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-[#fcfdfe] text-slate-900">
+<body>
 
-    <nav class="glass border-b border-slate-200 sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="font-extrabold text-2xl bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent tracking-tighter">
-                B I M S A R A . o n l i n e
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">B</span>
+        <span>
+          <span class="brand__name">Bimsara S. Kahandawala</span><br>
+          <span class="brand__sub">Optical Imaging · Computer Vision</span>
+        </span>
+      </a>
+      <div class="nav__links">
+        <a href="index.html">Home</a>
+        <a href="research.html" class="active">Research</a>
+        <a href="industry.html">Industry</a>
+        <a href="projects.html">Projects</a>
+        <a href="awards.html">Awards</a>
+        <a href="blog.html">Blog</a>
+      </div>
+      <a class="nav__cta" href="#publications">Publications</a>
+      <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><i class="fas fa-bars fa-lg"></i></button>
+    </div>
+    <div class="nav__mobile" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="industry.html">Industry</a>
+      <a href="projects.html">Projects</a>
+      <a href="awards.html">Awards</a>
+      <a href="blog.html">Blog</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="section section--ink scanlines" style="padding-top:80px;padding-bottom:70px;">
+    <div class="wrap">
+      <span class="eyebrow">Research Portfolio</span>
+      <h1 class="display" style="margin-top:22px;max-width:20ch;">Optical Imaging &amp; Computer Vision Research</h1>
+      <p class="lead" style="max-width:60ch;margin-top:22px;">
+        My research covers computer vision, deep learning, and image processing for optical and biomedical imaging.
+        I work mainly with Optical Coherence Tomography (OCT), developing methods
+        for medical diagnostics, micro-structural analysis, and non-destructive testing.
+      </p>
+      <div class="stats mt-l" style="max-width:760px;background:rgba(255,255,255,.03);border-color:rgba(255,255,255,.1);">
+        <div class="stat" style="border-color:rgba(255,255,255,.1);">
+          <div class="stat__num" style="color:#fff;">5</div>
+          <div class="stat__label" style="color:#9FB0C8;">Journal papers</div>
+        </div>
+        <div class="stat" style="border-color:rgba(255,255,255,.1);">
+          <div class="stat__num" style="color:#fff;">4</div>
+          <div class="stat__label" style="color:#9FB0C8;">As co-first author</div>
+        </div>
+        <div class="stat" style="border-color:rgba(255,255,255,.1);">
+          <div class="stat__num" style="color:#fff;">4</div>
+          <div class="stat__label" style="color:#9FB0C8;">Q1 journals</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num" style="color:#fff;">AI/ML</div>
+          <div class="stat__label" style="color:#9FB0C8;">Core focus</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PUBLICATIONS -->
+  <section class="section" id="publications">
+    <div class="wrap">
+      <div class="reveal" style="max-width:64ch;">
+        <span class="eyebrow">Peer-Reviewed Publications</span>
+        <h2 class="display mt-m">Five journal papers, co-first author on four</h2>
+        <p class="lead mt-m">
+          Published across Elsevier, the Royal Society of Chemistry, and Springer Nature. My name is
+          <span class="me">highlighted</span> in each author list; <strong>†</strong> marks an equal-contribution
+          (co-first) author.
+        </p>
+      </div>
+
+      <div class="stack-lg mt-l">
+
+        <!-- PUB 1 -->
+        <article class="pub reveal">
+          <div class="pub__top">
+            <span class="pub__index">01</span>
+            <span class="badge badge--first">Co-first †</span>
+            <span class="badge badge--q1">Q1 · IF ≈ 9.4</span>
+            <span class="badge badge--oa">Open Access</span>
+            <span class="pub__journal">Results in Engineering · Elsevier</span>
+          </div>
+          <h3 class="pub__title">Vision-incorporated Multichannel Feature Fusion Template Matching (MUFF-TM) and real-time sub-pixel coordinate localization for 2D textile surfaces in ultrasonic tacking systems</h3>
+          <p class="pub__authors">
+            <span class="me">Bimsara Sandaruwan Kahandawala †</span>, Rizma Nalmi †, Buddhika Amila Kumara Sodige,
+            Kasun Subasinghage, Bhagya Nathali Silva, Ruchire Eranga Wijesinghe, Seong Tak Woo
+          </p>
+          <div class="pub__meta">
+            <span class="mono muted" style="font-size:.74rem;">2026 · Vol 31, 111491</span>
+            <a class="pub__doi" href="https://doi.org/10.1016/j.rineng.2026.111491" target="_blank" rel="noopener">
+              <i class="fas fa-arrow-up-right-from-square"></i> 10.1016/j.rineng.2026.111491
             </a>
-
-            <div class="hidden md:flex space-x-10 font-semibold text-sm uppercase tracking-widest text-slate-500">
-                <a href="index.html" class="hover:text-blue-600 transition">Home</a>
-                <a href="industry.html" class="hover:text-blue-600 transition">Industry</a>
-                <a href="research.html" class="text-blue-600 hover:text-blue-700 transition">Research</a>
-                <a href="awards.html" class="hover:text-blue-600 transition">Awards</a>
+            <div class="pub__tags">
+              <span class="chip chip--plain">Computer Vision</span>
+              <span class="chip chip--plain">Sub-pixel Localization</span>
+              <span class="chip chip--plain">Industrial AI</span>
             </div>
+          </div>
+        </article>
 
-            <button id="menu-btn" class="md:hidden text-slate-600 focus:outline-none p-2">
-                <i class="fas fa-bars text-2xl" id="menu-icon"></i>
-            </button>
-        </div>
-
-        <div id="mobile-menu" class="hidden md:hidden glass border-t border-slate-100 animate-in slide-in-from-top duration-300">
-            <div class="px-6 py-8 flex flex-col space-y-6 font-bold text-xs uppercase tracking-[0.3em] text-slate-500">
-                <a href="index.html" class="hover:text-blue-600 transition">Home</a>
-                <a href="industry.html" class="hover:text-blue-600 transition">Industry</a>
-                <a href="research.html" class="hover:text-blue-600 transition">Research</a>
-                <a href="awards.html" class="hover:text-blue-600 transition">Awards</a>
+        <!-- PUB 2 -->
+        <article class="pub reveal">
+          <div class="pub__top">
+            <span class="pub__index">02</span>
+            <span class="badge badge--first">Co-first †</span>
+            <span class="badge badge--q2">Q2</span>
+            <span class="pub__journal">Emergent Materials · Springer Nature</span>
+          </div>
+          <h3 class="pub__title">OcupHI: a knowledge-driven colorimetric interpretation framework for high-precision real-time ocular pH diagnostics</h3>
+          <p class="pub__authors">
+            <span class="me">Bimsara Sandaruwan Kahandawala †</span>, H. H. P. Benuwan Sandaruwan, Pavanee Liyanage,
+            Rohan S. Dassanayake, Narahenpitage Pabakara Costha, Renuka N. Liyanage, Udaya Wijenayake,
+            Ruchire Eranga Wijesinghe, Bhagya Nathali Silva, Danushika C. Manatunga
+          </p>
+          <div class="pub__meta">
+            <span class="mono muted" style="font-size:.74rem;">2026 · Vol 9, Art. 204</span>
+            <a class="pub__doi" href="https://link.springer.com/journal/42247" target="_blank" rel="noopener">
+              <i class="fas fa-arrow-up-right-from-square"></i> Emergent Materials 9, 204 (2026)
+            </a>
+            <div class="pub__tags">
+              <span class="chip chip--plain">Biomedical Diagnostics</span>
+              <span class="chip chip--plain">Colorimetric Sensing</span>
+              <span class="chip chip--plain">Real-time</span>
             </div>
-        </div>
-    </nav>
+          </div>
+        </article>
 
-        <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
-
-        menuBtn.addEventListener('click', () => {
-            // Toggle the menu visibility
-            mobileMenu.classList.toggle('hidden');
-            
-            // Change icon from 'bars' to 'times' (X) when open
-            if (mobileMenu.classList.contains('hidden')) {
-                menuIcon.classList.remove('fa-times');
-                menuIcon.classList.add('fa-bars');
-            } else {
-                menuIcon.classList.remove('fa-bars');
-                menuIcon.classList.add('fa-times');
-            }
-        });
-
-        // Close menu if a link is clicked
-        const navLinks = mobileMenu.querySelectorAll('a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                menuIcon.classList.replace('fa-times', 'fa-bars');
-            });
-        });
-    </script>
-
-    <main class="max-w-4xl mx-auto py-20 px-6">
-        <header class="mb-16 text-center md:text-left">
-            <h1 class="text-5xl font-extrabold tracking-tighter text-slate-900 mb-4">Academic Portfolio</h1>
-            <p class="text-lg text-slate-500 font-medium">Exploration of theoretical frameworks and empirical research.</p>
-        </header>
-
-        <section class="mb-24">
-            <h2 class="text-2xl font-extrabold mb-12 flex items-center text-blue-600 tracking-tight">
-                <span class="w-10 h-1 bg-blue-600 mr-4 rounded-full"></span>
-                Research Experience
-            </h2>
-
-            <div class="relative border-l-2 border-slate-100 ml-4 md:ml-0"> 
-                <div class="mb-16 relative pl-10">
-                    <div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-blue-600 ring-4 ring-blue-50"></div>
-                    
-                    <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500">
-                        <div class="flex flex-col md:flex-row md:items-start justify-between mb-8 gap-4">
-                            <div class="flex-1">
-                                <h3 class="text-2xl font-extrabold text-slate-900 tracking-tight mb-4">Graduate Researcher</h3>
-                                
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 border-l-2 border-blue-100 pl-4">
-                                    <div class="flex flex-col">
-                                        <span class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">Center of Excellence</span>
-                                        <p class="text-blue-600 font-bold text-xs leading-relaxed">
-                                            CIET, Sri Lanka Institute of Information Technology, Sri Lanka
-                                        </p>
-                                    </div>
-                                    <div class="flex flex-col">
-                                        <span class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">Academic Department</span>
-                                        <p class="text-blue-600 font-bold text-xs leading-relaxed">
-                                            Department of Information Technology, Faculty of Computing, Sri Lanka Institute of Information Technology, Sri Lanka
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <span class="bg-slate-50 text-slate-500 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest border border-slate-100 whitespace-nowrap">
-                                Dec 2024 — Present
-                            </span>
-                        </div>
-
-                        <p class="text-slate-500 text-sm leading-relaxed mb-6">
-                            Conducting advanced research at the intersection of <strong>Biomedical Engineering</strong> and <strong>Computer Vision</strong>, specifically focusing on the analysis of <strong>Optical Coherence Tomography (OCT)</strong> imaging. I architect high-performance AI models and signal processing pipelines using Python and C++ to enhance medical diagnostics and micro-structural analysis.
-                        </p>
-
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold rounded-lg uppercase tracking-tight">Biomedical Engineering</span>
-                            <span class="px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold rounded-lg uppercase tracking-tight">Computer Vision</span>
-                            <span class="px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold rounded-lg uppercase tracking-tight">AI/ML</span>
-                            <span class="px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold rounded-lg uppercase tracking-tight">Technical Writing</span>
-                            <span class="px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold rounded-lg uppercase tracking-tight">OCT</span>
-                        </div>
-                    </div>
-                </div>
+        <!-- PUB 3 -->
+        <article class="pub reveal">
+          <div class="pub__top">
+            <span class="pub__index">03</span>
+            <span class="badge badge--first">Co-first †</span>
+            <span class="badge badge--q1">Q1</span>
+            <span class="pub__journal">Env. Science: Processes &amp; Impacts · RSC</span>
+          </div>
+          <h3 class="pub__title">Brewing plastics: OCT reveals microplastic release from nylon tea bags in simulated brewed tea infusions</h3>
+          <p class="pub__authors">
+            Pramoda Maheshi Jayasekara †, Praveen Abhishek †, <span class="me">Bimsara Sandaruwan Kahandawala †</span>,
+            Nisala Damith, Manura Weerasinghe, Nipun Shantha Kahatapitiya, Bhagya Nathali Silva, Shiromi Karunaratne,
+            Ruchire Eranga Wijesinghe, Udaya Wijenayake, Anushka Upamali Rajapaksha, Meththika Vithanage
+          </p>
+          <div class="pub__meta">
+            <span class="mono muted" style="font-size:.74rem;">2026 · Vol 28(2), 392–404</span>
+            <a class="pub__doi" href="https://doi.org/10.1039/D5EM00644A" target="_blank" rel="noopener">
+              <i class="fas fa-arrow-up-right-from-square"></i> 10.1039/D5EM00644A
+            </a>
+            <div class="pub__tags">
+              <span class="chip chip--plain">OCT</span>
+              <span class="chip chip--plain">Image Processing</span>
+              <span class="chip chip--plain">Environmental Health</span>
             </div>
-        </section>
+          </div>
+          <p class="muted" style="font-size:.86rem;margin:14px 0 0;display:flex;align-items:center;gap:8px;">
+            <i class="fas fa-newspaper" style="color:var(--accent);"></i>
+            Featured in national press — see <a href="#moments" style="color:var(--accent-ink);text-decoration:underline;">Research in the media</a> below.
+          </p>
+        </article>
 
-        <section class="mb-24">
-            <h2 class="text-2xl font-extrabold mb-12 flex items-center text-blue-600 tracking-tight">
-                <span class="w-10 h-1 bg-blue-600 mr-4 rounded-full"></span>
-                Research Publications
-            </h2>
-
-            <div class="p-8 bg-white rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500">
-                <div class="flex flex-wrap justify-between items-center gap-4 mb-6">
-                    <div class="flex gap-3">
-                        <span class="bg-emerald-50 text-emerald-600 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] border border-emerald-100">
-                            Q1
-                        </span>
-                        <span class="bg-slate-50 text-slate-500 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] border border-slate-100">
-                            Journal of Hazardous Materials
-                        </span>
-                    </div>
-                    <a href="https://doi.org/10.1016/j.jhazmat.2025.139231" target="_blank" class="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all">
-                        <i class="fas fa-external-link-alt text-sm"></i>
-                    </a>
-                </div>
-
-                <h3 class="text-xl font-extrabold text-slate-900 tracking-tight leading-tight">
-                    Environmental forensics of the X-press pearl disaster: Uncovering the internal micro-structural transformations in marine microplastics
-                </h3>
-                
-                <p class="mt-4 text-[10px] font-black text-slate-400 uppercase tracking-widest">
-                    Published 2025 • DOI: 10.1016/j.jhazmat.2025.139231
-                </p>
-            </div><br>
-
-            <div class="p-8 bg-white rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500">
-                <div class="flex flex-wrap justify-between items-center gap-4 mb-6">
-                    <div class="flex gap-3">
-                        <span class="bg-emerald-50 text-emerald-600 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] border border-emerald-100">
-                            Q1
-                        </span>
-                        <span class="bg-slate-50 text-slate-500 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] border border-slate-100">
-                            Royal Society of Chemistry
-                        </span>
-                    </div>
-                    <a href="https://doi.org/10.1039/D5EM00644A" target="_blank" class="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all">
-                        <i class="fas fa-external-link-alt text-sm"></i>
-                    </a>
-                </div>
-
-                <h3 class="text-xl font-extrabold text-slate-900 tracking-tight leading-tight">
-                    OCT Reveals Microplastics Release from Nylon Tea Bags in Simulated Brewed Tea Infusions
-                </h3>
-                
-                <p class="mt-4 text-[10px] font-black text-slate-400 uppercase tracking-widest">
-                    Published 2025 • DOI: - 10.1039/D5EM00644A
-                </p>
+        <!-- PUB 4 -->
+        <article class="pub reveal">
+          <div class="pub__top">
+            <span class="pub__index">04</span>
+            <span class="badge badge--first">Co-first †</span>
+            <span class="badge badge--q1">Q1</span>
+            <span class="pub__journal">Optik · Elsevier</span>
+          </div>
+          <h3 class="pub__title">High-resolution optical imaging for sustainable fish freshness and safety assessment</h3>
+          <p class="pub__authors">
+            M. Nerandi Madhubhashini †, <span class="me">Bimsara Sandaruwan Kahandawala †</span>,
+            H. H. P. Benuwan Sandaruwan, Bhagya Nathali Silva, Udaya Wijenayake, Ruchire Eranga Wijesinghe
+          </p>
+          <div class="pub__meta">
+            <span class="mono muted" style="font-size:.74rem;">2026</span>
+            <a class="pub__doi" href="https://doi.org/10.1016/j.ijleo.2026.172733" target="_blank" rel="noopener">
+              <i class="fas fa-arrow-up-right-from-square"></i> 10.1016/j.ijleo.2026.172733
+            </a>
+            <div class="pub__tags">
+              <span class="chip chip--plain">OCT</span>
+              <span class="chip chip--plain">Non-destructive Testing</span>
+              <span class="chip chip--plain">Food Quality</span>
             </div>
+          </div>
+        </article>
 
-
-        </section>
-
-        <section>
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-2xl font-extrabold mb-12 flex items-center text-blue-600 tracking-tight">
-                <span class="w-10 h-1 bg-blue-600 mr-4 rounded-full"></span>
-                Scholarly Engagement
-            </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="group cursor-zoom-in" onclick="openModal(this)">
-                    <div class="relative overflow-hidden rounded-[2rem] shadow-md border-2 border-transparent group-hover:border-blue-500 transition-all duration-300">
-                        <img src="images_com/spi2.webp" 
-                            data-full-title="Research presentation at Industry Expo 2024"
-                            data-full-desc="Presented a third-year undergraduate research project at the International Industrial Expo 2024, South Asia’s largest industrial exhibition."
-                            class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <i class="fas fa-expand text-white text-3xl"></i>
-                        </div>
-                    </div>
-                    <div class="mt-4 px-2 text-center">
-                        <h4 class="font-bold text-slate-900 text-lg">Research presentation at <b><i>Industry Expo 2024</i></b></h4>
-                        <p class="text-slate-500 text-sm mt-1 uppercase tracking-widest font-semibold">Presenting to Experts</p>
-                    </div>
-                </div>
+        <!-- PUB 5 -->
+        <article class="pub reveal">
+          <div class="pub__top">
+            <span class="pub__index">05</span>
+            <span class="badge badge--q1">Q1 · IF ≈ 13.6</span>
+            <span class="pub__journal">Journal of Hazardous Materials · Elsevier</span>
+          </div>
+          <h3 class="pub__title">Environmental forensics of the X-Press Pearl disaster: uncovering the internal micro-structural transformations in marine microplastics</h3>
+          <p class="pub__authors">
+            Pramoda Maheshi Jayasekara †, Praveen Abhishek †, Nipun Shantha Kahatapitiya, Manura Weerasinghe,
+            <span class="me">Bimsara Sandaruwan Kahandawala</span>, Bhagya Nathali Silva, Udaya Wijenayake,
+            Anushka Upamali Rajapaksha, Ruchire Eranga Wijesinghe, Meththika Vithanage
+          </p>
+          <div class="pub__meta">
+            <span class="mono muted" style="font-size:.74rem;">2025 · Vol 496, 139231</span>
+            <a class="pub__doi" href="https://doi.org/10.1016/j.jhazmat.2025.139231" target="_blank" rel="noopener">
+              <i class="fas fa-arrow-up-right-from-square"></i> 10.1016/j.jhazmat.2025.139231
+            </a>
+            <div class="pub__tags">
+              <span class="chip chip--plain">OCT</span>
+              <span class="chip chip--plain">Micro-structural Analysis</span>
+              <span class="chip chip--plain">Environmental Forensics</span>
             </div>
-        </div>
-    </section>
-            
-    <div id="lightbox" class="fixed inset-0 z-[100] hidden bg-slate-950/98 flex flex-col items-center justify-center p-6 backdrop-blur-md">
-            <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-950 text-5xl font-light hover:text-blue-600 transition-all z-[110]">&times;</button>        
-            
-            <div class="max-w-5xl w-full flex flex-col items-center">
-                <img id="lightbox-img" src="" class="max-h-[60vh] rounded-2xl shadow-2xl border border-white/10 transform scale-95 transition-transform duration-500">
-                
-                <div class="mt-8 text-center max-w-2xl animate-fade-in">
-                    <h3 id="modal-title" class="text-black text-2xl md:text-3xl font-black tracking-tight mb-4"></h3>
-                    <p id="modal-desc" class="text-slate-400 text-lg leading-relaxed"></p>
-                </div>
-            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="muted center mt-l" style="font-size:.9rem;">
+        Full record on
+        <a href="https://scholar.google.com/citations?user=uux83QUAAAAJ&hl=en" target="_blank" rel="noopener" style="color:var(--accent-ink);text-decoration:underline;">Google Scholar</a>.
+        Journal quartiles per latest Scimago / JCR.
+      </p>
     </div>
+  </section>
 
-    <script>
-            function openModal(element) {
-                const modal = document.getElementById('lightbox');
-                const img = document.getElementById('lightbox-img');
-                const titleField = document.getElementById('modal-title');
-                const descField = document.getElementById('modal-desc');
-                
-                // Find the image inside the clicked div
-                const clickedImg = element.querySelector('img');
-                
-                modal.classList.remove('hidden');
-                img.src = clickedImg.src;
-                titleField.innerText = clickedImg.getAttribute('data-full-title');
-                descField.innerText = clickedImg.getAttribute('data-full-desc');
-                
-                setTimeout(() => {
-                    img.classList.remove('scale-95');
-                    img.classList.add('scale-100');
-                }, 10);
-                
-                document.body.style.overflow = 'hidden';
-            }
-
-            function closeModal() {
-                const modal = document.getElementById('lightbox');
-                const img = document.getElementById('lightbox-img');
-                img.classList.add('scale-95');
-                modal.classList.add('hidden');
-                document.body.style.overflow = 'auto';
-            }
-
-            document.getElementById('lightbox').addEventListener('click', function(e) {
-                if (e.target === this) closeModal();
-            });
-    </script>
-
-    <style>
-            @keyframes fadeIn {
-                from { opacity: 0; transform: translateY(10px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
-            .animate-fade-in { animation: fadeIn 0.8s ease forwards; }
-    </style>
-    </main>
-
-    <footer class="py-20 bg-slate-900">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <p class="text-slate-500 uppercase tracking-[0.4em] font-bold text-[10px] mb-8">Contact & Collaborations</p>
-            <div class="flex justify-center gap-10 text-white text-2xl mb-12">
-                <a href="https://www.linkedin.com/in/bimsara-sandaruwan-977052200/" class="hover:text-blue-500 transition"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/BimsaraS99" class="hover:text-blue-500 transition"><i class="fab fa-github"></i></a>
-                <a href="https://www.youtube.com/c/ideaPacklk" class="hover:text-red-500 transition"><i class="fab fa-youtube"></i></a>
-                <a href="https://scholar.google.com/citations?user=uux83QUAAAAJ&hl=en" class="hover:text-blue-300 transition" target="_blank" rel="noopener"> <i class="fas fa-graduation-cap"></i> </a>
-                <a href="#"
-                onclick="event.preventDefault(); document.getElementById('contactModal').classList.remove('hidden');"
-                class="hover:text-blue-300 transition">
-                    <i class="fas fa-envelope"></i>
-                </a>
+  <!-- RESEARCH EXPERIENCE -->
+  <section class="section section--paper2">
+    <div class="wrap">
+      <div class="reveal" style="max-width:60ch;">
+        <span class="eyebrow">Research Experience</span>
+        <h2 class="display mt-m">Current Research Position</h2>
+      </div>
+      <div class="mt-l reveal">
+        <div class="card" style="padding:32px 34px;">
+          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:flex-start;">
+            <div>
+              <h3 class="display" style="font-size:1.5rem;">Graduate Researcher</h3>
+              <p class="mono" style="color:var(--accent-ink);font-size:.82rem;margin:6px 0 0;">
+                Center for Excellence in Informatics, Electronics &amp; Transmission (CIET) · SLIIT
+              </p>
+              <p class="muted" style="font-size:.9rem;margin:4px 0 0;">
+                Faculty of Computing, Sri Lanka Institute of Information Technology
+              </p>
             </div>
-            <div class="h-px w-20 bg-slate-800 mx-auto mb-8"></div>
-            <p class="text-slate-500 text-xs font-medium tracking-widest">© 2025 BimsaraS99 • INDUSTRY X ACADEMIA</p>
+            <span class="chip">Dec 2024 — Present</span>
+          </div>
+          <p class="mt-m" style="color:var(--slate);max-width:75ch;">
+            I research <strong>Biomedical Engineering</strong> and <strong>Computer Vision</strong>, focusing on
+            <strong>Optical Coherence Tomography (OCT)</strong> imaging. I build <strong>deep learning and machine
+            learning</strong> models and image-processing pipelines in Python and C++ for medical diagnostics and
+            micro-structural analysis.
+          </p>
+          <div class="skillgroup__list mt-m">
+            <span class="chip chip--plain">Biomedical Engineering</span>
+            <span class="chip chip--plain">Computer Vision</span>
+            <span class="chip chip--plain">Deep Learning</span>
+            <span class="chip chip--plain">Machine Learning</span>
+            <span class="chip chip--plain">AI/ML</span>
+            <span class="chip chip--plain">OCT</span>
+            <span class="chip chip--plain">Technical Writing</span>
+          </div>
         </div>
-    </footer>
-
-    <div id="contactModal"
-        onclick="this.classList.add('hidden')"
-        class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
-
-        <div onclick="event.stopPropagation()"
-            class="bg-gray-900 text-white rounded-xl p-6 w-80 relative text-sm">
-
-            <!-- Close button -->
-            <button onclick="document.getElementById('contactModal').classList.add('hidden')"
-                    class="absolute top-2 right-3 text-gray-400 hover:text-white text-xl">
-                &times;
-            </button>
-
-            <h3 class="text-lg font-semibold mb-4 text-center">Contact Details</h3>
-
-            <p class="mb-3">
-                <strong>Email:</strong><br>
-                <span class="text-blue-400">bimsaras99@gmail.com</span>
-            </p>
-
-            <p>
-                <strong>Phone / Whatsapp:</strong><br>
-                <span class="text-green-400">+94 76 650 7631</span>
-            </p>
-        </div>
+      </div>
     </div>
+  </section>
 
+  <!-- MOMENTS / MEDIA -->
+  <section class="section section--ink scanlines" id="moments">
+    <div class="wrap">
+      <div class="reveal" style="max-width:62ch;">
+        <span class="eyebrow">Research in the Media &amp; Community</span>
+        <h2 class="display mt-m">Media &amp; Community Coverage</h2>
+        <p class="lead mt-m">Our OCT microplastics study drew national newspaper coverage; I've also presented undergraduate research at South Asia's largest industrial exhibition.</p>
+      </div>
 
+      <div class="gallery mt-l reveal" style="grid-template-columns:1fr 1fr 1fr;">
+        <div class="figure" data-lightbox data-caption="The Sunday Times — Education Times: “Brewing Plastics: Scientists Detect Tiny Plastics in Tea Using Advanced Imaging.”" style="aspect-ratio:4/3;">
+          <img src="images_com/news_tea_english.webp" data-full="images_com/news_tea_english.webp" alt="The Sunday Times feature on the OCT tea-bag microplastics research" loading="lazy">
+          <div class="figure__cap"><b>The Sunday Times</b><span>National Press · Tea-bag OCT study</span></div>
+        </div>
+        <div class="figure" data-lightbox data-caption="Aruna (Vanija Lokaya) — Sinhala-language coverage of the nylon tea-bag microplastics discovery." style="aspect-ratio:4/3;">
+          <img src="images_com/news_tea_sinhala.webp" data-full="images_com/news_tea_sinhala.webp" alt="Aruna newspaper Sinhala coverage of the tea-bag microplastics research" loading="lazy">
+          <div class="figure__cap"><b>Aruna · Vanija Lokaya</b><span>National Press · Sinhala</span></div>
+        </div>
+        <div class="figure" data-lightbox data-caption="Presenting undergraduate research at Industry Expo 2024 — South Asia's largest industrial exhibition." style="aspect-ratio:4/3;">
+          <img src="images_com/spi2.webp" data-full="images_com/spi2.webp" alt="Presenting research at Industry Expo 2024" loading="lazy">
+          <div class="figure__cap"><b>Industry Expo 2024</b><span>Presenting to Experts</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--tight center">
+    <div class="wrap">
+      <h2 class="display reveal">Get in Touch</h2>
+      <p class="lead reveal" style="max-width:56ch;margin:16px auto 0;">I'm always happy to discuss computer vision, optical and biomedical imaging, and applied machine learning — whether for collaboration, research, or a conversation. My CV has the full details.</p>
+      <div class="reveal" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px;">
+        <a class="btn btn--primary" href="#" data-contact><i class="fas fa-envelope"></i> Contact me</a>
+        <a class="btn btn--ghost" href="cv.pdf" target="_blank" rel="noopener"><i class="fas fa-file-arrow-down"></i> Download CV</a>
+        <a class="btn btn--ghost" href="industry.html"><i class="fas fa-arrow-right"></i> See industry work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand-name">Bimsara Sandaruwan Kahandawala</p>
+          <p style="max-width:42ch;font-size:.95rem;">Researcher and engineer working in computer vision, deep learning, machine learning, and biomedical imaging.</p>
+          <div class="footer__social">
+            <a href="https://scholar.google.com/citations?user=uux83QUAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+            <a href="https://github.com/BimsaraS99" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/bimsara-sandaruwan-977052200/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" data-contact aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div>
+          <h5>Explore</h5>
+          <div class="footer__links">
+            <a href="research.html">Research &amp; Publications</a>
+            <a href="industry.html">Industry Experience</a>
+            <a href="projects.html">Engineering Projects</a>
+            <a href="awards.html">Awards</a>
+            <a href="blog.html">Blog</a>
+          </div>
+        </div>
+        <div>
+          <h5>Elsewhere</h5>
+          <div class="footer__links">
+            <a href="https://scholar.google.com/citations?user=uux83QUAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="https://github.com/BimsaraS99" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.youtube.com/c/ideaPacklk" target="_blank" rel="noopener">YouTube — ideaPack lk</a>
+            <a href="#" data-contact>Email &amp; WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="year">2026</span> Bimsara Sandaruwan Kahandawala</span>
+        <span>Industry × Academia · bimsara.online</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lb" id="lightbox">
+    <button class="lb__close" aria-label="Close">&times;</button>
+    <div style="display:grid;place-items:center;">
+      <img class="lb__img" src="" alt="Enlarged view">
+      <p class="lb__cap"></p>
+    </div>
+  </div>
+
+  <!-- Contact modal -->
+  <div class="modal" id="contactModal">
+    <div class="modal__card">
+      <button class="modal__close" data-close aria-label="Close">&times;</button>
+      <h3>Get in touch</h3>
+      <div class="modal__row"><i class="fas fa-envelope"></i><div><span>Email</span><b>bimsaras99@gmail.com</b></div></div>
+      <div class="modal__row"><i class="fab fa-whatsapp"></i><div><span>Phone / WhatsApp</span><b>+94 76 650 7631</b></div></div>
+      <div class="modal__row"><i class="fas fa-graduation-cap"></i><div><span>Academic</span><b>Google Scholar profile</b></div></div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>

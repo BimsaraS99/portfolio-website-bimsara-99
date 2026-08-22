@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects · Bimsara Sandaruwan Kahandawala</title>
+  <meta name="description" content="Engineering and learning projects by Bimsara Sandaruwan Kahandawala — neural networks from scratch, embedded robotics, and computer-vision experiments.">
+  <link rel="icon" type="image/png" href="images_com/icon.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,560;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">B</span>
+        <span>
+          <span class="brand__name">Bimsara S. Kahandawala</span><br>
+          <span class="brand__sub">Optical Imaging · Computer Vision</span>
+        </span>
+      </a>
+      <div class="nav__links">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="industry.html">Industry</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="awards.html">Awards</a>
+        <a href="blog.html">Blog</a>
+      </div>
+      <a class="nav__cta" href="https://github.com/BimsaraS99" target="_blank" rel="noopener">GitHub</a>
+      <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><i class="fas fa-bars fa-lg"></i></button>
+    </div>
+    <div class="nav__mobile" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="industry.html">Industry</a>
+      <a href="projects.html">Projects</a>
+      <a href="awards.html">Awards</a>
+      <a href="blog.html">Blog</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="section" style="padding-top:66px;padding-bottom:30px;">
+    <div class="wrap">
+      <span class="eyebrow">Engineering &amp; Learning Projects</span>
+      <h1 class="display" style="margin-top:22px;max-width:16ch;">Personal &amp; University Projects</h1>
+      <p class="lead" style="max-width:62ch;margin-top:20px;">
+        A selection of personal and university projects covering deep learning, computer vision, robotics, embedded
+        systems, and mechatronics. These form the foundation behind my research and industry work.
+      </p>
+      <a class="btn btn--ghost" href="https://github.com/BimsaraS99" target="_blank" rel="noopener" style="margin-top:22px;"><i class="fab fa-github"></i> 80+ repositories on GitHub</a>
+    </div>
+  </header>
+
+  <!-- PROJECT GRID -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="grid-3 reveal">
+
+        <article class="card" style="overflow:hidden;">
+          <div class="figure" data-lightbox data-caption="Neural network built from scratch in NumPy — forward and backward passes, no ML frameworks." style="border:0;border-radius:0;aspect-ratio:16/11;">
+            <img src="images_com/nn.webp" data-full="images_com/nn.webp" alt="Neural network from scratch" loading="lazy">
+          </div>
+          <div style="padding:22px 24px;">
+            <h3 class="display" style="font-size:1.2rem;">Neural Network from Scratch</h3>
+            <p class="muted mt-s" style="font-size:.9rem;">A full feed-forward network implemented in pure NumPy — backprop, activations, and training loop written by hand to understand every step.</p>
+            <div class="skillgroup__list mt-s"><span class="chip chip--plain">NumPy</span><span class="chip chip--plain">Backprop</span></div>
+          </div>
+        </article>
+
+        <article class="card" style="overflow:hidden;">
+          <div class="figure" data-lightbox data-caption="PID-controlled maze-runner robot — line following and wall navigation." style="border:0;border-radius:0;aspect-ratio:16/11;">
+            <img src="images_com/robo.webp" data-full="images_com/robo.webp" alt="PID maze runner robot" loading="lazy">
+          </div>
+          <div style="padding:22px 24px;">
+            <h3 class="display" style="font-size:1.2rem;">PID Maze-Runner Robot</h3>
+            <p class="muted mt-s" style="font-size:.9rem;">Autonomous robot tuned with a PID control loop for smooth, accurate line-following and maze navigation.</p>
+            <div class="skillgroup__list mt-s"><span class="chip chip--plain">PID Control</span><span class="chip chip--plain">Robotics</span></div>
+          </div>
+        </article>
+
+        <article class="card" style="overflow:hidden;">
+          <div class="figure" data-lightbox data-caption="Handheld 8×8 LED-matrix game console built on a microcontroller." style="border:0;border-radius:0;aspect-ratio:16/11;">
+            <img src="images_com/gb.webp" data-full="images_com/gb.webp" alt="8x8 LED matrix Game Boy" loading="lazy">
+          </div>
+          <div style="padding:22px 24px;">
+            <h3 class="display" style="font-size:1.2rem;">8×8 LED-Matrix Game Console</h3>
+            <p class="muted mt-s" style="font-size:.9rem;">A miniature handheld "Game Boy" driving an 8×8 LED matrix from a microcontroller — input handling, rendering, and game logic in embedded C.</p>
+            <div class="skillgroup__list mt-s"><span class="chip chip--plain">Embedded C</span><span class="chip chip--plain">Microcontroller</span></div>
+          </div>
+        </article>
+
+        <article class="card" style="overflow:hidden;">
+          <div class="figure" data-lightbox data-caption="IoT pill-reminder device designed for visually impaired users." style="border:0;border-radius:0;aspect-ratio:16/11;">
+            <img src="images_com/blind.webp" data-full="images_com/blind.webp" alt="IoT pill reminder for the blind" loading="lazy">
+          </div>
+          <div style="padding:22px 24px;">
+            <h3 class="display" style="font-size:1.2rem;">IoT Pill Reminder for the Blind</h3>
+            <p class="muted mt-s" style="font-size:.9rem;">An accessible medication-reminder device using audio cues and IoT connectivity, designed around the needs of visually impaired users.</p>
+            <div class="skillgroup__list mt-s"><span class="chip chip--plain">IoT</span><span class="chip chip--plain">Accessibility</span></div>
+          </div>
+        </article>
+
+        <article class="card" style="overflow:hidden;">
+          <div class="figure" data-lightbox data-caption="Precision DC-motor controller built on an ATmega microcontroller." style="border:0;border-radius:0;aspect-ratio:16/11;">
+            <img src="images_com/dc.webp" data-full="images_com/dc.webp" alt="DC motor controller" loading="lazy">
+          </div>
+          <div style="padding:22px 24px;">
+            <h3 class="display" style="font-size:1.2rem;">DC-Motor Controller (ATmega)</h3>
+            <p class="muted mt-s" style="font-size:.9rem;">Closed-loop speed and direction control for a DC motor programmed on an ATmega microcontroller in C.</p>
+            <div class="skillgroup__list mt-s"><span class="chip chip--plain">ATmega</span><span class="chip chip--plain">Control</span></div>
+          </div>
+        </article>
+
+        <article class="card" style="overflow:hidden;">
+          <div class="figure" data-lightbox data-caption="Computer-vision fabric alignment experiment." style="border:0;border-radius:0;aspect-ratio:16/11;">
+            <img src="images_com/cv1.webp" data-full="images_com/cv1.webp" alt="Computer vision fabric alignment" loading="lazy">
+          </div>
+          <div style="padding:22px 24px;">
+            <h3 class="display" style="font-size:1.2rem;">CV Fabric Alignment</h3>
+            <p class="muted mt-s" style="font-size:.9rem;">An early computer-vision experiment detecting and correcting fabric orientation — a precursor to later production inspection work.</p>
+            <div class="skillgroup__list mt-s"><span class="chip chip--plain">OpenCV</span><span class="chip chip--plain">Image Processing</span></div>
+          </div>
+        </article>
+
+        <article class="card" style="overflow:hidden;">
+          <div class="figure" data-lightbox data-caption="Self-published Python MCQ book for A/L ICT students." style="border:0;border-radius:0;aspect-ratio:16/11;">
+            <img src="images_com/py.webp" data-full="images_com/py.webp" alt="Python MCQ book for A/L ICT" loading="lazy">
+          </div>
+          <div style="padding:22px 24px;">
+            <h3 class="display" style="font-size:1.2rem;">Python MCQ Book — A/L ICT</h3>
+            <p class="muted mt-s" style="font-size:.9rem;">An educational resource of Python multiple-choice questions written to help Advanced-Level ICT students learn programming.</p>
+            <div class="skillgroup__list mt-s"><span class="chip chip--plain">Python</span><span class="chip chip--plain">Education</span></div>
+          </div>
+        </article>
+
+        <a class="card" href="https://github.com/BimsaraS99" target="_blank" rel="noopener" style="overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 24px;background:var(--ink);color:#fff;border-color:transparent;">
+          <i class="fab fa-github" style="font-size:2.4rem;color:var(--accent-2);"></i>
+          <h3 class="display" style="font-size:1.2rem;color:#fff;margin-top:14px;">More on GitHub</h3>
+          <p style="color:#9FB0C8;font-size:.9rem;margin-top:6px;">80+ repositories spanning ML, generative AI, embedded systems and more.</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand-name">Bimsara Sandaruwan Kahandawala</p>
+          <p style="max-width:42ch;font-size:.95rem;">Researcher and engineer working in computer vision, deep learning, machine learning, and biomedical imaging.</p>
+          <div class="footer__social">
+            <a href="https://scholar.google.com/citations?user=uux83QUAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+            <a href="https://github.com/BimsaraS99" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/bimsara-sandaruwan-977052200/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" data-contact aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div>
+          <h5>Explore</h5>
+          <div class="footer__links">
+            <a href="research.html">Research &amp; Publications</a>
+            <a href="industry.html">Industry Experience</a>
+            <a href="projects.html">Engineering Projects</a>
+            <a href="awards.html">Awards</a>
+            <a href="blog.html">Blog</a>
+          </div>
+        </div>
+        <div>
+          <h5>Elsewhere</h5>
+          <div class="footer__links">
+            <a href="https://scholar.google.com/citations?user=uux83QUAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="https://github.com/BimsaraS99" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.youtube.com/c/ideaPacklk" target="_blank" rel="noopener">YouTube — ideaPack lk</a>
+            <a href="#" data-contact>Email &amp; WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="year">2026</span> Bimsara Sandaruwan Kahandawala</span>
+        <span>Industry × Academia · bimsara.online</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lb" id="lightbox">
+    <button class="lb__close" aria-label="Close">&times;</button>
+    <div style="display:grid;place-items:center;">
+      <img class="lb__img" src="" alt="Enlarged view">
+      <p class="lb__cap"></p>
+    </div>
+  </div>
+
+  <!-- Contact modal -->
+  <div class="modal" id="contactModal">
+    <div class="modal__card">
+      <button class="modal__close" data-close aria-label="Close">&times;</button>
+      <h3>Get in touch</h3>
+      <div class="modal__row"><i class="fas fa-envelope"></i><div><span>Email</span><b>bimsaras99@gmail.com</b></div></div>
+      <div class="modal__row"><i class="fab fa-whatsapp"></i><div><span>Phone / WhatsApp</span><b>+94 76 650 7631</b></div></div>
+      <div class="modal__row"><i class="fas fa-graduation-cap"></i><div><span>Academic</span><b>Google Scholar profile</b></div></div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

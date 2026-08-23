@@ -49,6 +49,14 @@
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 
+  // YouTube facade — load the iframe only when the thumbnail is clicked
+  document.querySelectorAll('.video__frame[data-yt]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      var id = el.getAttribute('data-yt');
+      el.innerHTML = '<iframe src="https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0" title="YouTube video" allow="accelerated-delivery; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    }, { once: true });
+  });
+
   // Contact modal
   var modal = document.getElementById('contactModal');
   document.querySelectorAll('[data-contact]').forEach(function (btn) {

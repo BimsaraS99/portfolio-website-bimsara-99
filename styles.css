@@ -364,3 +364,18 @@ h3.display { font-size: clamp(1.35rem, 2.2vw, 1.7rem); font-weight: 540; }
 .modal__row i { width: 40px; height: 40px; border-radius: 10px; background: var(--accent-wash); color: var(--accent-ink); display: grid; place-items: center; }
 .modal__row span { font-family: var(--f-mono); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--slate-2); display: block; }
 .modal__row b { font-size: 1rem; color: var(--ink); font-weight: 500; }
+
+/* ---------- Video tutorials ---------- */
+.videos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.video { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s, border-color .35s; }
+.video:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--line-strong); }
+.video__frame { position: relative; aspect-ratio: 16/9; width: 100%; border: 0; padding: 0; margin: 0; cursor: pointer; background-color: var(--ink); background-size: cover; background-position: center; display: block; overflow: hidden; }
+.video__frame::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,15,26,.06), rgba(10,15,26,.34)); transition: background .3s; z-index: 1; }
+.video__frame:hover::after { background: linear-gradient(180deg, rgba(10,15,26,.04), rgba(10,15,26,.14)); }
+.video__play { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 2; width: 58px; height: 58px; border-radius: 50%; background: rgba(14,116,144,.94); color: #fff; display: grid; place-items: center; font-size: 1.15rem; box-shadow: 0 8px 24px rgba(0,0,0,.32); transition: transform .3s, background .3s; }
+.video__frame:hover .video__play { transform: translate(-50%,-50%) scale(1.08); background: var(--accent-2); }
+.video__frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; z-index: 3; }
+.video__body { padding: 16px 18px 18px; }
+.video__tag { font-family: var(--f-mono); font-size: .62rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-ink); }
+.video__title { font-family: var(--f-display); font-size: 1.04rem; font-weight: 540; line-height: 1.26; margin: 6px 0 0; color: var(--ink); }
+@media (max-width: 900px) { .videos { grid-template-columns: 1fr; } }

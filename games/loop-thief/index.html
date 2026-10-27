@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>LOOP THIEF — Playground</title>
+  <meta name="description" content="LOOP THIEF — a time-loop heist puzzle. Every failed attempt becomes a ghost that helps you on the next run.">
+  <meta property="og:title" content="LOOP THIEF">
+  <meta property="og:description" content="Every failed attempt becomes part of the plan. A time-loop heist puzzle in your browser.">
+  <meta name="theme-color" content="#070b18">
+  <link rel="icon" type="image/png" href="../../images_com/icon.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="back" href="../../games.html">← Playground</a>
+    <span class="brand">LOOP<em>THIEF</em></span>
+    <div class="top__btns">
+      <button class="icon" id="btnHelp" aria-label="How to play">?</button>
+      <button class="icon" id="btnPause" aria-label="Pause and settings">❚❚</button>
+    </div>
+  </header>
+
+  <main class="game">
+    <section class="stage">
+      <div class="hud">
+        <div class="hud__lvl"><span class="tag">LVL <b id="lvlNum">01</b></span><h1 id="lvlName">First Echo</h1></div>
+        <div class="hud__stats">
+          <span>ATTEMPT <b id="attempt">1</b></span>
+          <span>GHOSTS <b id="ghostCount">0/3</b></span>
+          <span class="status" id="status" data-mode="plan">PLANNING</span>
+        </div>
+      </div>
+      <p class="objective" id="objective"></p>
+      <div class="board" id="boardWrap">
+        <canvas id="board" aria-label="Game board"></canvas>
+        <div class="coach" id="coach" hidden></div>
+      </div>
+    </section>
+
+    <aside class="panel-side">
+      <p class="hint" id="hint" hidden><b>HINT</b> <span></span></p>
+      <div class="tl-head"><span>TIMELINE</span><span>PLAN <b id="planCount">0/16</b></span></div>
+      <div class="timeline" id="timeline" aria-live="polite"></div>
+
+      <div class="controls">
+        <div class="pad" role="group" aria-label="Plan actions">
+          <button class="key key--up" data-act="U" aria-label="Move up">↑</button>
+          <button class="key key--left" data-act="L" aria-label="Move left">←</button>
+          <button class="key key--wait" data-act="W" aria-label="Wait one tick">WAIT<small>Q</small></button>
+          <button class="key key--right" data-act="R" aria-label="Move right">→</button>
+          <button class="key key--down" data-act="D" aria-label="Move down">↓</button>
+          <button class="key key--use" data-act="I" aria-label="Use switch">USE<small>E</small></button>
+        </div>
+        <div class="acts">
+          <button class="abtn" id="btnUndo">⌫ Undo</button>
+          <button class="abtn" id="btnClear">✕ Clear plan</button>
+          <button class="abtn abtn--run" id="btnRun">▶ RUN</button>
+          <button class="abtn abtn--quiet" id="btnRestart">⟲ Restart level</button>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/simulation.js"></script>
+  <script src="js/levels.js"></script>
+  <script src="js/save.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/demo.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
